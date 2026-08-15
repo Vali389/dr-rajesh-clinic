@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import StatsBar from '../components/StatsBar';
 import PopularTreatments from '../components/PopularTreatments';
+import { services } from '../data/services';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('Spine & Back Pain');
@@ -253,63 +254,121 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 2. Detailed Services Section */}
+      {/* 2. Detailed Services Section (Alternating Left/Right Grid for ALL Services) */}
       <section id="detailed-services" className="py-24 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-2xl lg:text-[28px] font-serif text-[#1e375a] uppercase tracking-wide">DETAILED SERVICES WE OFFER</h2>
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-20 max-w-3xl mx-auto">
+            <p className="uppercase tracking-widest text-[#9C4146] text-xs font-bold mb-3">OUR SPECIALIZED CARE</p>
+            <h2 className="text-3xl lg:text-4xl font-serif text-[#1e375a] font-bold uppercase tracking-wide">Detailed Services & Treatments</h2>
             <DecorativeDivider />
+            <p className="text-gray-600 text-sm mt-3">
+              Explore our complete range of non-surgical, image-guided interventional pain management services designed to restore your active lifestyle.
+            </p>
           </motion.div>
           
-          <div className="flex flex-col md:flex-row gap-12">
-            
-            {/* Left Tabs */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="md:w-1/3 flex flex-col gap-3">
-              {Object.keys(detailedServices).map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`w-full text-left px-6 py-4 rounded-xl flex justify-between items-center transition-all duration-300 font-bold text-[14px] ${
-                    activeTab === tab 
-                      ? 'bg-[#9C4146] text-white shadow-md' 
-                      : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  {tab}
-                  <ChevronRight size={18} className={activeTab === tab ? "opacity-100 text-white" : "opacity-50"} />
-                </button>
-              ))}
-            </motion.div>
-            
-             {/* Right Content */}
-             <motion.div 
-               initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
-               className="md:w-2/3 bg-white rounded-[32px] p-10 border border-gray-100 flex flex-col lg:flex-row gap-10 items-center shadow-xl"
-             >
-              <div className="lg:w-1/2">
-                <h3 className="text-3xl font-serif text-[#1e375a] mb-4">{detailedServices[activeTab].title}</h3>
-                <p className="text-gray-500 text-[14px] leading-relaxed mb-8">{detailedServices[activeTab].desc}</p>
-                
-                <ul className="space-y-4">
-                  {detailedServices[activeTab].points.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-[#9C4146] shrink-0 mt-0.5" size={16} strokeWidth={2.5} />
-                      <span className="text-[13.5px] text-gray-800 font-medium">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to={`/services/${tabLinks[activeTab]}`} className="mt-8 inline-flex items-center gap-2 text-[#9C4146] font-bold text-[13px] uppercase tracking-wider hover:text-[#1e375a] transition-colors group">
-                  Explore Full Details <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-              
-              <div className="lg:w-1/2 w-full h-full min-h-[300px]">
-                <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                  <img src={detailedServices[activeTab].image} alt={detailedServices[activeTab].title} className="w-full h-full object-cover" />
+          <div className="space-y-24">
+            {services.map((service, idx) => (
+              <motion.div 
+                key={service.id}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeUp}
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${
+                  idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Text Content Block */}
+                <div className="lg:w-1/2 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <span className="bg-[#9C4146]/10 text-[#9C4146] text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                      {service.category}
+                    </span>
+                    <span className="text-gray-400 text-xs font-medium">Service 0{idx + 1}</span>
+                  </div>
+
+                  <h3 className="text-3xl lg:text-4xl font-serif font-bold text-[#1e375a] leading-tight">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    {service.overview}
+                  </p>
+
+                  {/* Quick Info Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#fcfaf9] p-4 rounded-2xl border border-gray-100">
+                    <div>
+                      <p className="text-[10px] uppercase font-bold text-gray-400">Duration</p>
+                      <p className="text-xs font-bold text-[#1e375a] mt-0.5">{service.quick.time}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase font-bold text-gray-400">Downtime</p>
+                      <p className="text-xs font-bold text-[#1e375a] mt-0.5">{service.quick.downtime}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase font-bold text-gray-400">Results</p>
+                      <p className="text-xs font-bold text-[#9C4146] mt-0.5">{service.quick.results}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase font-bold text-gray-400">Sessions</p>
+                      <p className="text-xs font-bold text-[#1e375a] mt-0.5">{service.quick.sessions}</p>
+                    </div>
+                  </div>
+
+                  {/* Conditions List */}
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-[#1e375a] mb-3">Key Conditions Treated:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {service.conditions.slice(0, 4).map((cond, cIdx) => (
+                        <div key={cIdx} className="flex items-center gap-2.5">
+                          <CheckCircle2 size={16} className="text-[#9C4146] shrink-0" />
+                          <span className="text-xs font-medium text-gray-700">{cond}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-4 pt-2">
+                    <Link 
+                      to={`/services/${service.id}`} 
+                      className="bg-[#1e375a] hover:bg-[#9C4146] text-white py-3.5 px-6 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md flex items-center gap-2 group"
+                    >
+                      View Full Service Details <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link 
+                      to="/contact" 
+                      className="border border-gray-300 hover:border-[#1e375a] text-[#1e375a] py-3.5 px-6 rounded-xl font-bold text-xs uppercase tracking-wider transition-all"
+                    >
+                      Book Consultation
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-            
+
+                {/* Image Block */}
+                <div className="lg:w-1/2 w-full">
+                  <div className="relative rounded-[36px] overflow-hidden shadow-[0_20px_50px_rgba(30,55,90,0.12)] border-4 border-white aspect-[4/3] group">
+                    <img 
+                      src={service.img} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e375a]/60 via-transparent to-transparent opacity-80"></div>
+                    
+                    <div className="absolute bottom-6 left-6 right-6 text-white flex items-center justify-between">
+                      <div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#C19A6B] block">Non-Surgical Care</span>
+                        <h4 className="font-serif font-bold text-lg text-white">{service.title}</h4>
+                      </div>
+                      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white shrink-0">
+                        <ChevronRight size={20} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
