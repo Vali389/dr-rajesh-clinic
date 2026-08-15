@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sparkles, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sparkles, AlertCircle, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function ContactUs() {
