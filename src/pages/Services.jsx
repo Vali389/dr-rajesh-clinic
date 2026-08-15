@@ -373,48 +373,112 @@ export default function Services() {
         </div>
       </section>
 
-      {/* NEW SECTION 2: 3-Step Treatment Roadmap */}
-      <section className="py-24 bg-[#fcfaf9]">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="uppercase tracking-widest text-[#9C4146] text-xs font-bold mb-3">HOW WE CARE FOR YOU</p>
-            <h2 className="text-3xl lg:text-4xl font-serif text-[#1e375a] font-bold">Your 3-Step Pain Relief Roadmap</h2>
+      {/* NEW SECTION 2: HOW WE CARE FOR YOU - Light Luxury Process Timeline */}
+      <section className="py-24 bg-gradient-to-b from-[#fcfdfd] via-[#f7f9fb] to-[#ffffff] border-t border-gray-100 relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+          
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-20 max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#9C4146]/10 text-[#9C4146] text-xs font-bold uppercase tracking-widest mb-3 border border-[#9C4146]/20">
+              HOW WE CARE FOR YOU
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-serif text-[#1e375a] font-bold leading-tight">
+              Our 4-Step Patient Relief Process
+            </h2>
+            <div className="flex items-center justify-center gap-2 my-4">
+              <div className="h-[1px] w-12 bg-[#9C4146] opacity-50"></div>
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#9C4146]"></div>
+              <div className="h-[1px] w-12 bg-[#9C4146] opacity-50"></div>
+            </div>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Every patient receives a personalized, non-surgical treatment plan designed to eliminate pain and restore long-term mobility.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {[
               {
                 step: '01',
-                title: 'Comprehensive Evaluation',
-                desc: 'Detailed clinical assessment, MRI review, and diagnostic nerve block to pinpoint the exact source of pain.'
+                title: 'Comprehensive Consultation',
+                desc: 'Detailed physical exam, MRI review, and mapping of your exact pain origin.',
+                img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&auto=format&fit=crop&q=80',
+                badge: 'Diagnosis'
               },
               {
                 step: '02',
-                title: 'Image-Guided Procedure',
-                desc: 'Minimally invasive, outpatient procedure performed under high-precision C-Arm Fluoroscopy or Ultrasound.'
+                title: 'Precision Nerve Test',
+                desc: 'Diagnostic nerve block confirms the exact pain generator with 100% precision.',
+                img: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=500&auto=format&fit=crop&q=80',
+                badge: 'Targeting'
               },
               {
                 step: '03',
-                title: 'Lasting Relief & Rehab',
-                desc: 'Personalized recovery roadmap, physical rehabilitation, and regular follow-ups to maintain pain-free mobility.'
+                title: 'Image-Guided Intervention',
+                desc: '30-minute outpatient procedure under live C-Arm Fluoroscopy or Ultrasound.',
+                img: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=500&auto=format&fit=crop&q=80',
+                badge: 'Procedure'
+              },
+              {
+                step: '04',
+                title: 'Lasting Recovery & Rehab',
+                desc: 'Same-day home return with custom physical therapy and active progress tracking.',
+                img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&auto=format&fit=crop&q=80',
+                badge: 'Recovery'
               }
-            ].map((s, idx) => (
-              <motion.div 
-                key={idx} 
-                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-lg transition-all"
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="bg-white rounded-[32px] overflow-hidden shadow-[0_15px_40px_rgba(30,55,90,0.06)] border border-gray-100 hover:shadow-[0_20px_50px_rgba(156,65,70,0.12)] hover:border-[#9C4146]/30 transition-all duration-300 flex flex-col justify-between group"
               >
-                <span className="font-serif font-bold text-5xl text-[#C19A6B]/20 absolute top-4 right-6 group-hover:text-[#9C4146]/30 transition-colors">
-                  {s.step}
-                </span>
-                <div className="w-10 h-10 rounded-full bg-[#1e375a] text-white flex items-center justify-center font-bold text-sm mb-6">
-                  {idx + 1}
+                <div>
+                  {/* Step Image Thumbnail */}
+                  <div className="h-44 overflow-hidden relative">
+                    <img 
+                      src={item.img} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e375a]/70 via-transparent to-transparent"></div>
+                    
+                    {/* Badge */}
+                    <span className="absolute top-4 left-4 bg-[#9C4146] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                      {item.badge}
+                    </span>
+
+                    {/* Step Number Circle */}
+                    <div className="absolute bottom-3 right-4 w-11 h-11 rounded-2xl bg-white text-[#1e375a] font-serif font-bold text-lg flex items-center justify-center shadow-lg border border-gray-100">
+                      {item.step}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <span className="text-[11px] font-bold text-[#9C4146] uppercase tracking-wider block mb-1">Step {item.step}</span>
+                    <h3 className="font-serif font-bold text-xl text-[#1e375a] mb-2 leading-snug group-hover:text-[#9C4146] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-500 text-xs leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-serif font-bold text-xl text-[#1e375a] mb-3">{s.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{s.desc}</p>
+
+                {/* Footer Action */}
+                <div className="px-6 pb-6 pt-2">
+                  <div className="flex items-center justify-between text-xs font-bold text-[#1e375a] group-hover:text-[#9C4146] transition-colors pt-3 border-t border-gray-100">
+                    <span>Explore Step Details</span>
+                    <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
