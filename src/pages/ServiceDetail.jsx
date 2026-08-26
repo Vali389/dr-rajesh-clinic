@@ -310,7 +310,7 @@ export default function ServiceDetail() {
                   "The goal is not just to relieve pain — it is to help patients return to a better, more active life."
                 </p>
                 <footer className="mt-7">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#9C4146]">Dr. Rajesh Kumar Vasam</p>
+                  <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#9C4146]">Dr. Vasam Rajesh Kumar</p>
                   <p className="text-[11px] text-gray-400 mt-1">Interventional Pain Specialist</p>
                 </footer>
               </motion.blockquote>
@@ -361,7 +361,7 @@ export default function ServiceDetail() {
                     </span>
                     <div>
                       <p className="text-white font-serif font-bold text-[16px] leading-none">Book a Consultation</p>
-                      <p className="text-white/50 text-[11px] mt-1">with Dr. Rajesh Kumar Vasam</p>
+                      <p className="text-white/50 text-[11px] mt-1">with Dr. Vasam Rajesh Kumar</p>
                     </div>
                   </div>
 
@@ -478,7 +478,7 @@ export default function ServiceDetail() {
                 Ready to Begin {service.title}?
               </motion.h2>
               <motion.p variants={fadeUp} className="text-white/70 text-[15px] max-w-xl mx-auto mb-9">
-                Book a consultation with Dr. Rajesh today and take the first step towards a pain-free, active life.
+                Book a consultation with Dr. Vasam Rajesh Kumar today and take the first step towards a pain-free, active life.
               </motion.p>
               <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
                 className="bg-[#C19A6B] hover:bg-white text-[#1e375a] py-4 px-10 rounded-full font-bold text-[13px] uppercase tracking-wider transition-all duration-300 shadow-lg flex items-center gap-3 mx-auto">

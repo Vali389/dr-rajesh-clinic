@@ -129,30 +129,37 @@ export default function ContactUs() {
                 </span>
                 <h2 className="text-3xl font-serif font-bold text-white mb-3">Clinic Contact Details</h2>
                 <p className="text-white/75 text-xs sm:text-sm leading-relaxed mb-8">
-                  Dr. Rajesh Kumar Vasam offers specialized interventional pain management at Bachupally, Hyderabad. Contact us directly for immediate appointments.
+                  Dr. Rajesh Kumar Vasam offers specialized interventional pain management at Chandanagar and Bachupally, Hyderabad. Contact us directly for immediate appointments.
                 </p>
 
                 <div className="space-y-5 mb-8">
                   {/* Phone & WhatsApp Card */}
-                  <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15 flex items-center justify-between gap-4 hover:bg-white/15 transition-colors">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[#C19A6B] text-[#1e375a] flex items-center justify-center shrink-0 shadow-md">
-                        <Phone size={22} />
+                  <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15 hover:bg-white/15 transition-colors">
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-[#C19A6B] text-[#1e375a] flex items-center justify-center shrink-0 shadow-md">
+                          <Phone size={22} />
+                        </div>
+                        <div>
+                          <p className="text-[11px] font-bold text-[#C19A6B] uppercase tracking-wider">Phone & WhatsApp</p>
+                          <a href="tel:+917995574432" className="text-white font-bold text-lg hover:text-[#C19A6B] transition-colors">+91 79955 74432</a>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-[11px] font-bold text-[#C19A6B] uppercase tracking-wider">Phone & WhatsApp</p>
-                        <a href="tel:+918125982855" className="text-white font-bold text-lg hover:text-[#C19A6B] transition-colors">+91 81259 82855</a>
-                      </div>
+                      <a 
+                        href={`https://wa.me/917995574432?text=${encodeURIComponent('Hello Dr. Rajesh Clinic, I would like to book an appointment.')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md shrink-0"
+                        title="Chat on WhatsApp"
+                      >
+                        <img src="https://api.iconify.design/logos:whatsapp-icon.svg" className="w-5 h-5" alt="WA" />
+                      </a>
                     </div>
-                    <a 
-                      href={`https://wa.me/918125982855?text=${encodeURIComponent('Hello Dr. Rajesh Clinic, I would like to book an appointment.')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md shrink-0"
-                      title="Chat on WhatsApp"
-                    >
-                      <img src="https://api.iconify.design/logos:whatsapp-icon.svg" className="w-5 h-5" alt="WA" />
-                    </a>
+                    <div className="flex items-center gap-3 pl-16">
+                      <a href="tel:+919346297238" className="text-white/80 text-sm hover:text-[#C19A6B] transition-colors">+91 93462 97238</a>
+                      <span className="text-white/30">|</span>
+                      <a href="tel:+918125982855" className="text-white/80 text-sm hover:text-[#C19A6B] transition-colors">+91 81259 82855</a>
+                    </div>
                   </div>
 
                   {/* Address Card */}
@@ -161,17 +168,19 @@ export default function ContactUs() {
                       <MapPin size={22} />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-[#C19A6B] uppercase tracking-wider">Clinic Location</p>
+                      <p className="text-[11px] font-bold text-[#C19A6B] uppercase tracking-wider">Clinic Locations</p>
                       <p className="text-white font-medium text-sm mt-0.5 leading-snug">
-                        Bachupally, Hyderabad, Telangana - 500090
+                        Omega PRP Hospital, Chandanagar<br/>
+                        Radiance Speciality Clinics, Bachupally
+                      </p>
+                      <p className="text-white/50 text-[11px] mt-1 leading-snug">
+                        Sri Hanuman's Pagadala Pride, Flat No. 201,<br/>above Dominos Pizza, B Block, Bachupally 500118
                       </p>
                       <a 
-                        href="https://maps.google.com/?q=Bachupally,+Hyderabad" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                        href="#maps" 
                         className="text-[11px] text-[#C19A6B] font-bold underline mt-1.5 inline-block hover:text-white transition-colors"
                       >
-                        Get Google Maps Directions →
+                        View on Map →
                       </a>
                     </div>
                   </div>
@@ -181,13 +190,13 @@ export default function ContactUs() {
                     <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
                       <Mail size={18} className="text-[#C19A6B] mb-2" />
                       <p className="text-[10px] font-bold text-white/60 uppercase tracking-wider">Email</p>
-                      <p className="text-white text-xs font-semibold truncate mt-0.5">info@drrajeshclinics.com</p>
+                      <p className="text-white text-xs font-semibold truncate mt-0.5">drrajeshvasam@gmail.com</p>
                     </div>
 
                     <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
                       <Clock size={18} className="text-[#C19A6B] mb-2" />
-                      <p className="text-[10px] font-bold text-white/60 uppercase tracking-wider">Hours</p>
-                      <p className="text-white text-xs font-semibold mt-0.5">Mon – Sat: 9 AM – 8 PM</p>
+                      <p className="text-[10px] font-bold text-white/60 uppercase tracking-wider">Availability</p>
+                      <p className="text-white text-xs font-semibold mt-0.5">Omega PRP: 9am - 4pm<br/>Radiance: 6pm - 9pm</p>
                     </div>
                   </div>
                 </div>
@@ -350,19 +359,34 @@ export default function ContactUs() {
         </div>
       </section>
 
-      {/* Embedded Map Section: Bachupally, Hyderabad */}
-      <section className="pb-20">
+      {/* Embedded Map Section: Bachupally & Chandanagar, Hyderabad */}
+      <section className="pb-20" id="maps">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200 h-[400px]">
-            <iframe 
-              title="Dr Rajesh Clinic Location - Bachupally Hyderabad"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.148154133469!2d78.3846!3d17.5348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8e13717c18c5%3A0x6b2b7373f1d24590!2sBachupally%2C%20Hyderabad%2C%20Telangana%20500090!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy"
-            ></iframe>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200 h-[350px]">
+              <div className="bg-[#1e375a] text-white py-2 px-4 text-center font-semibold text-sm">Omega PRP Hospital, Chandanagar (9 AM - 4 PM)</div>
+              <iframe 
+                title="Omega PRP Hospital Chandanagar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1583803875567!2d78.32488331527871!3d17.498453404179374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9232938096dd%3A0xe67bc7d206f2c38f!2sChandanagar%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200 h-[350px]">
+              <div className="bg-[#9C4146] text-white py-2 px-4 text-center font-semibold text-sm">Radiance Specialty Clinic, Bachupally (6 PM - 9 PM)</div>
+              <iframe 
+                title="Radiance Specialty Clinic Bachupally"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.148154133469!2d78.3846!3d17.5348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8e13717c18c5%3A0x6b2b7373f1d24590!2sBachupally%2C%20Hyderabad%2C%20Telangana%20500090!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

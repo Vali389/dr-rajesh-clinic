@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
               Excellence in Care,<br/> <span className="italic font-light text-white/90">Results You Can Trust.</span>
             </h2>
             <p className="text-white/70 text-[16px] leading-relaxed mb-10 max-w-lg">
-              Dr. Rajesh Kumar Vasam is a highly specialized Interventional Pain Physician offering world-class, non-surgical solutions to help you reclaim your active life. 
+              Dr. Vasam Rajesh Kumar is a highly specialized Interventional Pain Physician offering world-class, non-surgical solutions to help you reclaim your active life. 
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

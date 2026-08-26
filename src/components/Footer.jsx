@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="font-serif font-bold text-xl text-white">Need Immediate Pain Relief Consultation?</h3>
-              <p className="text-white/70 text-sm">Schedule your appointment with Dr. Rajesh in Bachupally, Hyderabad.</p>
+              <p className="text-white/70 text-sm">Schedule your appointment with Dr. Rajesh in Chandanagar & Bachupally, Hyderabad.</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -49,7 +49,7 @@ export default function Footer() {
                    R
                  </div>
                  <div>
-                    <h2 className="font-serif text-2xl font-bold text-white tracking-wide">Dr. Rajesh</h2>
+                    <h2 className="font-serif text-2xl font-bold text-white tracking-wide">Dr. Vasam Rajesh Kumar</h2>
                     <p className="text-[9px] uppercase tracking-[0.2em] text-[#C19A6B] font-bold">Interventional Pain Physician</p>
                   </div>
               </div>
@@ -110,19 +110,24 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-white/75">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#9C4146] shrink-0 mt-1" />
-                <span className="leading-relaxed">Bachupally,<br/>Hyderabad, Telangana - 500090</span>
+                <span className="leading-relaxed">Omega PRP Hospital, Chandanagar<br/>Radiance Speciality Clinics, Bachupally<br/><span className="text-white/50 text-xs">Sri Hanuman's Pagadala Pride, Flat No. 201, above Dominos Pizza, B Block, Bachupally 500118</span></span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-[#9C4146] shrink-0" />
-                <a href="tel:+918125982855" className="hover:text-white transition-colors font-semibold">+91 81259 82855</a>
+              <li className="flex items-start gap-3">
+                <Phone size={18} className="text-[#9C4146] shrink-0 mt-1" />
+                <span className="leading-relaxed">
+                  <a href="tel:+917995574432" className="hover:text-white transition-colors font-semibold">+91 79955 74432</a><br/>
+                  <a href="tel:+919346297238" className="hover:text-white transition-colors text-xs">+91 93462 97238</a>
+                  <span className="text-white/30 mx-1">|</span>
+                  <a href="tel:+918125982855" className="hover:text-white transition-colors text-xs">+91 81259 82855</a>
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#9C4146] shrink-0" />
-                <span>info@drrajeshclinics.com</span>
+                <span>drrajeshvasam@gmail.com</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock size={18} className="text-[#9C4146] shrink-0" />
-                <span>Mon – Sat: 9:00 AM – 8:00 PM</span>
+              <li className="flex items-start gap-3">
+                <Clock size={18} className="text-[#9C4146] shrink-0 mt-1" />
+                <span className="leading-relaxed">Omega PRP: 9am - 4pm<br/>Radiance: 6pm - 9pm</span>
               </li>
             </ul>
           </div>
@@ -131,13 +136,21 @@ export default function Footer() {
 
         {/* Bottom Copyright Sub-Footer */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
-          <p>© 2024 Dr. Rajesh Kumar Vasam Clinics. All Rights Reserved.</p>
+          <p>© 2024 Dr. Vasam Rajesh Kumar — Radiance Speciality Clinics. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
             <span>•</span>
             <Link to="/services" className="hover:text-white transition-colors">Services</Link>
             <span>•</span>
             <Link to="/contact" className="hover:text-white transition-colors">Book Appointment</Link>
+          </div>
+          <div className="flex items-center gap-4 text-white/50">
+            <a href="https://www.instagram.com/radiancespecialityclinics/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@radianceclinics-dr.rajeshvasam" target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
           </div>
         </div>
 

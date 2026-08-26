@@ -45,7 +45,7 @@ export const services = [
   },
   {
     id: 'knee-osteoarthritis',
-    title: 'Knee Osteoarthritis',
+    title: 'Knee Pain & Osteoarthritis',
     tagline: 'COOLIEF RFA & regenerative PRP to restore mobility without surgery.',
     category: 'Joint & Knee Pain',
     icon: 'person-simple-walk',
@@ -92,7 +92,7 @@ export const services = [
     tagline: 'Epidural steroid injections, facet blocks & targeted nerve ablations.',
     category: 'Spine & Back Pain',
     icon: 'bone',
-    img: 'https://images.pexels.com/photos/4989186/pexels-photo-4989186.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: '/spine_interventions.jpg',
     quick: {
       time: '20 - 40 mins',
       downtime: 'Minimal',
@@ -135,7 +135,7 @@ export const services = [
     tagline: 'Nerve blocks & medication management for CRPS, diabetic neuropathy & neuralgias.',
     category: 'Nerve & Neuropathy',
     icon: 'lightning',
-    img: 'https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=800',
+    img: '/neuropathic_pain.jpg',
     quick: {
       time: '30 - 45 mins',
       downtime: 'Minimal',
@@ -259,6 +259,82 @@ export const services = [
       { q: 'How soon can I return to sport?', a: 'That depends on the injury. Our structured protocol and clear milestones get you back safely, usually faster than without intervention.' },
       { q: 'Is PRP safe?', a: 'Yes — it uses your own blood, so there is virtually no risk of allergic reaction or disease transmission.' },
       { q: 'Will I need surgery?', a: 'Most sports injuries heal without surgery when managed early with the right combination of regenerative therapy and rehab.' }
+    ]
+  },
+  {
+    id: 'cancer-and-palliative-care',
+    title: 'Cancer and Palliative Care',
+    tagline: 'Compassionate care focusing on quality of life and pain relief.',
+    category: 'Specialized Care',
+    icon: 'heartbeat',
+    img: '/cancer_palliative_care.jpg',
+    quick: {
+      time: 'Variable',
+      downtime: 'None',
+      results: 'Ongoing support',
+      sessions: 'Customized'
+    },
+    overview: 'Cancer treatments and the disease itself can cause severe pain. Palliative care focuses on relieving this pain and improving the quality of life for both the patient and their family.',
+    longDesc: 'Dr. Rajesh provides comprehensive palliative care, employing advanced pain management techniques to alleviate suffering. This includes specialized nerve blocks, medication management, and supportive therapies designed to comfort patients through their journey.',
+    conditions: [
+      'Cancer-related pain',
+      'Neuropathy from chemotherapy',
+      'Bone metastasis pain',
+      'Severe chronic illness pain'
+    ],
+    process: [
+      { title: 'Comprehensive Evaluation', desc: 'Understanding the patient\'s unique pain profile and goals.' },
+      { title: 'Customized Pain Plan', desc: 'Tailoring medications and interventions for optimal comfort.' },
+      { title: 'Interventional Relief', desc: 'Targeted nerve blocks and advanced techniques when needed.' },
+      { title: 'Ongoing Support', desc: 'Continuous monitoring and adjustment of the care plan.' }
+    ],
+    benefits: [
+      'Improved quality of life',
+      'Reduced suffering and discomfort',
+      'Holistic approach to well-being',
+      'Support for both patient and family'
+    ],
+    faqs: [
+      { q: 'Is palliative care only for end-of-life?', a: 'No, palliative care can be provided at any stage of a serious illness to manage symptoms and improve quality of life.' },
+      { q: 'What pain treatments are used?', a: 'Treatments range from oral medications to advanced interventional procedures like nerve blocks and epidurals.' }
+    ]
+  },
+  {
+    id: 'regenerative-care-wellness',
+    title: 'Regenerative Care & Advanced Wellness Therapy',
+    tagline: 'Harnessing the body\'s natural healing power for holistic wellness.',
+    category: 'Regenerative Therapy',
+    icon: 'sparkle',
+    img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop&q=80',
+    quick: {
+      time: '45 - 60 mins',
+      downtime: 'Minimal',
+      results: 'Gradual improvement',
+      sessions: 'Varies by individual'
+    },
+    overview: 'Regenerative care focuses on repairing and restoring damaged tissues using the body\'s own mechanisms, combined with advanced wellness therapies to optimize overall health.',
+    longDesc: 'Combining therapies like PRP, Stem Cell treatments, and advanced wellness protocols, Dr. Rajesh offers cutting-edge regenerative care. These therapies are designed not just to mask symptoms, but to actively promote healing, reduce inflammation, and restore vitality.',
+    conditions: [
+      'Chronic joint degeneration',
+      'Tendinopathies and sports injuries',
+      'General fatigue and wellness optimization',
+      'Anti-aging and vitality concerns'
+    ],
+    process: [
+      { title: 'Holistic Assessment', desc: 'Evaluating overall health, lifestyle, and specific concerns.' },
+      { title: 'Regenerative Therapy', desc: 'Application of PRP or other regenerative techniques.' },
+      { title: 'Wellness Protocols', desc: 'Integration of IV therapies, ozone, or targeted supplements.' },
+      { title: 'Optimization', desc: 'Ongoing monitoring to ensure peak health and recovery.' }
+    ],
+    benefits: [
+      'Natural healing using the body\'s own resources',
+      'Comprehensive approach to health',
+      'Reduced need for invasive procedures',
+      'Enhanced vitality and recovery'
+    ],
+    faqs: [
+      { q: 'What is included in wellness therapy?', a: 'It can include a mix of regenerative injections, IV nutrition, ozone therapy, and lifestyle optimization.' },
+      { q: 'Are these therapies safe?', a: 'Yes, regenerative therapies typically use your body\'s own cells or natural substances, minimizing the risk of adverse reactions.' }
     ]
   }
 ];

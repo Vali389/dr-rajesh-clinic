@@ -125,7 +125,7 @@ export default function BlogDetail() {
                 <UserRound size={20} />
               </div>
               <div>
-                <p className="font-bold text-[13px] text-[#1e375a]">Dr. Rajesh Kumar Vasam</p>
+                <p className="font-bold text-[13px] text-[#1e375a]">Dr. Vasam Rajesh Kumar</p>
                 <p className="text-[11px] text-gray-400">Interventional Pain Specialist</p>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function BlogDetail() {
               <motion.blockquote initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
                 className="relative border-l-4 border-[#9C4146] pl-6 py-2 mb-12">
                 <p className="text-[#1e375a] font-serif text-[18px] lg:text-[20px] font-bold leading-relaxed italic">"{post.excerpt}"</p>
-                <footer className="mt-3 text-[12px] text-gray-400 font-bold uppercase tracking-widest">— Dr. Rajesh Kumar Vasam</footer>
+                <footer className="mt-3 text-[12px] text-gray-400 font-bold uppercase tracking-widest">— Dr. Vasam Rajesh Kumar</footer>
               </motion.blockquote>
 
               <div className="space-y-16">
@@ -258,7 +258,7 @@ export default function BlogDetail() {
                   </div>
                   <div className="text-center sm:text-left">
                     <p className="text-[11px] uppercase tracking-widest text-[#9C4146] font-bold mb-1">Written by</p>
-                    <h4 className="font-serif font-bold text-[#1e375a] text-[18px] mb-1">Dr. Rajesh Kumar Vasam</h4>
+                    <h4 className="font-serif font-bold text-[#1e375a] text-[18px] mb-1">Dr. Vasam Rajesh Kumar</h4>
                     <p className="text-gray-500 text-[13px] leading-relaxed">
                       Interventional Pain Specialist with 15+ years of experience in image-guided, minimally invasive treatments for chronic pain.
                     </p>

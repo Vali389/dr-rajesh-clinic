@@ -45,14 +45,19 @@ export default function AboutUs() {
             {/* Left Content */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="lg:w-[55%] pr-8">
               <p className="uppercase tracking-widest text-[#9C4146] text-[11px] font-bold mb-4">
-                 ABOUT DR. RAJESH KUMAR VASAM
+               ABOUT DR. VASAM RAJESH KUMAR
               </p>
               <h1 className="text-5xl lg:text-[60px] font-serif text-[#1e375a] leading-[1.1] mb-6">
                 Healing Pain. Restoring Life.
               </h1>
-              <p className="text-gray-700 text-[15px] leading-relaxed mb-12 max-w-lg">
-                Dr. Rajesh Kumar Vasam is an Interventional Pain Physician, Anesthesiologist and Critical Care Medicine Specialist with experience in advanced pain management, critical care, anesthesia services, and rehabilitation-focused care.
+              <p className="text-gray-700 text-[15px] leading-relaxed mb-6 max-w-lg">
+                Dr. Vasam Rajesh Kumar (MBBS, MD, FIPM) is an Interventional Pain Physician and HOD – Anaesthesia and Pain Medicine. He specializes in advanced pain management, critical care, anesthesia services, and rehabilitation-focused care at Radiance Speciality Clinics.
               </p>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-[2px] w-8 bg-[#9C4146]"></div>
+                <span className="text-[#9C4146] font-bold text-sm italic">Compassion · Care · Cure</span>
+                <div className="h-[2px] w-8 bg-[#9C4146]"></div>
+              </div>
               
               {/* 4 Circular Icons */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-4">
@@ -84,6 +89,55 @@ export default function AboutUs() {
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* NEW: Mission Statement & Philosophy */}
+      <section className="py-20 bg-white relative">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#9C4146]/10 text-[#9C4146] text-xs font-bold uppercase tracking-widest mb-6 border border-[#9C4146]/20">
+              Our Mission
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-[#1e375a] leading-tight mb-8">
+              "To provide comprehensive pain relief and improve the quality of life of our patients through advanced interventional techniques, compassionate palliative care, and innovative regenerative medicine therapies."
+            </h2>
+            <p className="text-xl md:text-2xl font-serif italic text-[#C19A6B]">
+              Relieving Pain. Restoring Function. Renewing Hope.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NEW: Why Choose Radiance Speciality Clinics */}
+      <section className="py-24 bg-gradient-to-b from-[#f8f9fa] to-white relative">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <h2 className="text-2xl lg:text-[28px] font-serif text-[#1e375a] uppercase tracking-wide">Why Choose Radiance Speciality Clinics?</h2>
+            <DecorativeDivider />
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">We are dedicated to bringing you the highest standard of non-surgical pain management.</p>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Expert Care", desc: "Provided by a fellowship-trained Interventional Pain Specialist.", icon: "ph:user-focus-light" },
+              { title: "Personalized Plans", desc: "Treatment plans carefully tailored to each individual patient.", icon: "ph:clipboard-text-light" },
+              { title: "Advanced Procedures", desc: "Image-guided, minimally invasive procedures for precision.", icon: "ph:crosshair-light" },
+              { title: "Avoid Major Surgery", desc: "Reduced need for major surgery whenever possible.", icon: "ph:shield-check-light" },
+              { title: "Faster Recovery", desc: "Minimal hospital stay allowing you to get back to life quicker.", icon: "ph:clock-clockwise-light" },
+              { title: "Multidisciplinary", desc: "Combining pain medicine, palliative care, and regenerative therapies.", icon: "ph:users-three-light" },
+              { title: "Compassionate Care", desc: "Patient-centered approach focusing on your overall well-being.", icon: "ph:heart-light" },
+              { title: "Long-Term Relief", desc: "Holistic integration of rehab and therapies for lasting comfort.", icon: "ph:infinity-light" }
+            ].map((feature, idx) => (
+              <motion.div key={idx} variants={fadeUp} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-[#1e375a]/5 text-[#1e375a] flex items-center justify-center mb-4">
+                  <img src={`https://api.iconify.design/${feature.icon}.svg?color=%231e375a`} className="w-7 h-7" alt={feature.title} />
+                </div>
+                <h4 className="font-bold text-[#1e375a] text-[15px] mb-2">{feature.title}</h4>
+                <p className="text-[13px] text-gray-600 leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

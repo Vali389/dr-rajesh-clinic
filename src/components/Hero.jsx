@@ -170,7 +170,7 @@ export default function Hero() {
               
               <div className="absolute bottom-5 left-5 right-5 text-white">
                 <span className="inline-block bg-[#9C4146] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-1">
-                  C-Arm Image-Guided
+                  C-Arm & Ultrasound Guided
                 </span>
                 <p className="font-serif font-bold text-sm leading-tight text-white">Non-Surgical Interventional Pain Center</p>
               </div>

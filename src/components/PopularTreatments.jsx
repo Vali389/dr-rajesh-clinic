@@ -4,32 +4,32 @@ import { motion } from 'framer-motion';
 export default function PopularTreatments() {
   const treatments = [
     {
-      img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/4047000/pexels-photo-4047000.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "Epidural Steroid Injections",
       desc: "Targeted relief for sciatica and nerve compression."
     },
     {
-      img: "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/3845126/pexels-photo-3845126.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "Radiofrequency Ablation",
       desc: "Long-lasting pain relief for facet joints and knees."
     },
     {
-      img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/5998492/pexels-photo-5998492.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "COOLIEF RFA",
       desc: "Advanced cooled RF for chronic knee osteoarthritis."
     },
     {
-      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "Regenerative PRP Therapy",
       desc: "Accelerate healing in joints, tendons, and ligaments."
     },
     {
-      img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "Diagnostic Nerve Blocks",
       desc: "Precision diagnosis and immediate pain relief."
     },
     {
-      img: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=500&auto=format&fit=crop&q=80",
+      img: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=500",
       title: "Ozone Interventions",
       desc: "Innovative ozone therapy for discogenic pain."
     }
@@ -51,7 +51,8 @@ export default function PopularTreatments() {
         
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-16">
           <p className="uppercase tracking-widest text-[#9C4146] text-[11px] font-bold mb-3">OUR POPULAR TREATMENTS</p>
-          <h2 className="text-4xl lg:text-5xl font-serif text-[#1e375a]">Transform Your Look. Enhance Your Life.</h2>
+          <h2 className="text-4xl lg:text-5xl font-serif text-[#1e375a]">Advanced Pain Relief. <span className="italic font-light text-[#9C4146]">Minimally Invasive.</span></h2>
+          <p className="text-gray-500 text-[15px] mt-5 max-w-xl mx-auto leading-relaxed">Evidence-based, image-guided procedures designed to eliminate pain and restore function — without surgery.</p>
           <div className="flex items-center justify-center gap-2 mt-6">
             <div className="h-[1px] w-12 bg-[#9C4146] opacity-50"></div>
             <div className="w-1.5 h-1.5 rotate-45 bg-[#9C4146]"></div>

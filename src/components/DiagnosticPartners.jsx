@@ -14,7 +14,7 @@ export default function DiagnosticPartners() {
 
   const partners = [
     {
-      name: "Omega PRK Hospital",
+      name: "Omega PRP Hospital",
       type: "Multi-Speciality Hospital",
       role: "HOD — Anesthesiology & Pain Medicine",
       location: "Chandanagar, Hyderabad",
@@ -27,7 +27,7 @@ export default function DiagnosticPartners() {
       role: "Founder & CEO",
       location: "Multi-Hospital Network, Hyderabad",
       icon: <HeartPulse size={24} strokeWidth={1.5} />,
-      features: ["ICU Solutions", "OT Setup & Management", "Hospital Consulting"]
+      features: ["ICU Services", "OT Services", "Hospital Consulting"]
     },
     {
       name: "Radiance Speciality Clinics",
@@ -38,9 +38,9 @@ export default function DiagnosticPartners() {
       features: ["Pain Management", "Women's Health", "Home Care Services"]
     },
     {
-      name: "Manipal TRUtest Diagnostics",
+      name: "Ramanuja and Life Cell Diagnostics",
       type: "Diagnostics Partner",
-      role: "Preferred Diagnostic Centre",
+      role: "Managing Director Consultant and Critical Care and Pain Physician",
       location: "Hyderabad",
       icon: <FlaskConical size={24} strokeWidth={1.5} />,
       features: ["Comprehensive Blood Tests", "Advanced Imaging", "Home Sample Collection"]

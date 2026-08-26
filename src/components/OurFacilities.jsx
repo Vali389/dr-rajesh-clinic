@@ -8,30 +8,30 @@ export default function OurFacilities() {
 
   const facilities = [
     { 
-      name: "Ultrasound scanning", 
-      icon: "healthicons:ultrasound-outline", 
-      fallbackIcon: "ph:scan-light",
+      name: "Ozone Therapy", 
+      icon: "healthicons:oxygen-tank-outline", 
+      fallbackIcon: "ph:wind-light",
       delay: 0.2, 
       pos: "top-[15%] left-[5%] lg:left-[10%]" 
     },
     { 
-      name: "Laparoscopy", 
-      icon: "healthicons:laparoscopy-outline", 
-      fallbackIcon: "ph:first-aid-kit-light",
+      name: "Regenerative Therapy", 
+      icon: "healthicons:biochemistry-laboratory-outline", 
+      fallbackIcon: "ph:dna-light",
       delay: 0.4, 
       pos: "top-[15%] right-[5%] lg:right-[10%]" 
     },
     { 
-      name: "Hysteroscopy", 
-      icon: "healthicons:gynecology-outline", 
-      fallbackIcon: "ph:gender-female-light",
+      name: "C-Arm", 
+      icon: "healthicons:medical-equipment-outline", 
+      fallbackIcon: "ph:monitor-light",
       delay: 0.6, 
       pos: "bottom-[15%] left-[5%] lg:left-[10%]" 
     },
     { 
-      name: "Laboratory", 
-      icon: "ph:microscope-light", 
-      fallbackIcon: "ph:flask-light",
+      name: "Ultra Sound", 
+      icon: "healthicons:ultrasound-outline", 
+      fallbackIcon: "ph:scan-light",
       delay: 0.8, 
       pos: "bottom-[15%] right-[5%] lg:right-[10%]" 
     }

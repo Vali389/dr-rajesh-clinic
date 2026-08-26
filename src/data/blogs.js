@@ -137,6 +137,98 @@ export const posts = [
       'Image guidance keeps the procedure safe and precise',
       'Best results come from combining ESI with physiotherapy'
     ]
+  },
+  {
+    id: 'ozone-therapy',
+    title: 'Ozone Therapy: A Breakthrough in Pain Management',
+    category: 'Alternative Therapies',
+    date: 'Dec 05, 2023',
+    author: 'Dr. Rajesh',
+    readTime: '4 min read',
+    img: '/ozone_therapy.jpg',
+    excerpt: 'Discover how Ozone Therapy offers a non-invasive, highly effective alternative for treating herniated discs and joint pain.',
+    sections: [
+      {
+        heading: 'What is Ozone Therapy?',
+        paragraphs: [
+          'Ozone therapy involves the administration of ozone gas into targeted areas of the body to promote healing, reduce inflammation, and enhance oxygenation in damaged tissues.',
+        ]
+      }
+    ],
+    takeaways: [
+      'Reduces inflammation rapidly',
+      'Non-surgical intervention for disc pain',
+      'Safe and effective alternative therapy'
+    ]
+  },
+  {
+    id: 'stem-cells-regenerative',
+    title: 'Stem Cells and Regenerative Therapies',
+    category: 'Regenerative Medicine',
+    date: 'Dec 12, 2023',
+    author: 'Dr. Rajesh',
+    readTime: '6 min read',
+    img: '/stem_cells.jpg',
+    excerpt: 'Harness the power of your own body. Learn how stem cell therapy and regenerative medicine are repairing tissue and reversing joint damage.',
+    sections: [
+      {
+        heading: 'The Future of Healing',
+        paragraphs: [
+          'Stem cell therapy utilizes the body\'s natural repair mechanisms to treat a variety of painful conditions. By injecting concentrated growth factors directly into the affected area, we can stimulate the regeneration of cartilage, tendons, and ligaments.',
+        ]
+      }
+    ],
+    takeaways: [
+      'Utilizes your body\'s own cells',
+      'Promotes actual tissue repair',
+      'Can delay or prevent the need for joint replacement'
+    ]
+  },
+  {
+    id: 'prolotherapy',
+    title: 'Prolotherapy for Chronic Joint Pain',
+    category: 'Regenerative Medicine',
+    date: 'Dec 19, 2023',
+    author: 'Dr. Rajesh',
+    readTime: '5 min read',
+    img: '/prolotherapy.jpg',
+    excerpt: 'Prolotherapy is an injection-based treatment used in chronic musculoskeletal conditions. Here is why it might be the solution for your persistent pain.',
+    sections: [
+      {
+        heading: 'Healing Through Natural Inflammation',
+        paragraphs: [
+          'Prolotherapy works by injecting a natural irritant into the soft tissue of an injured joint. This mildly triggers the body\'s healing response, strengthening the weakened ligaments and tendons.',
+        ]
+      }
+    ],
+    takeaways: [
+      'Strengthens weakened ligaments',
+      'Uses natural irritants like dextrose',
+      'Effective for chronic sprains and strains'
+    ]
+  },
+  {
+    id: 'cancer-and-pain-management',
+    title: 'Cancer and Pain Management: Improving Quality of Life',
+    category: 'Palliative Care',
+    date: 'Jan 05, 2024',
+    author: 'Dr. Rajesh',
+    readTime: '7 min read',
+    img: '/cancer_pain.jpg',
+    excerpt: 'Living with cancer is difficult enough without unmanaged pain. Learn about the interventional strategies available to provide relief and improve well-being.',
+    sections: [
+      {
+        heading: 'Addressing the Pain of Cancer',
+        paragraphs: [
+          'Cancer pain can arise from a tumor pressing on nerves, bones, or organs, or as a side effect of treatments like chemotherapy and radiation. Effective pain management is crucial for maintaining strength and quality of life.',
+        ]
+      }
+    ],
+    takeaways: [
+      'Pain relief is a critical component of cancer care',
+      'Interventional blocks can reduce reliance on oral medications',
+      'Improves overall quality of life'
+    ]
   }
 ];
 
