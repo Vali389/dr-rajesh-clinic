@@ -1,37 +1,50 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import epiduralImg from '../assets/treatments/epidural_steroid_injection.jpg';
+import rfaImg from '../assets/treatments/rfa.jpg';
+import coolRfsImg from '../assets/treatments/cool_rfs.png';
+import ozoneImg from '../assets/treatments/ozone_therapy.png';
+import diagnosticImg from '../assets/treatments/diagnostic_block.png';
+import prpImg from '../assets/treatments/regenerative_prp.png';
+import stemCellImg from '../assets/treatments/stem_cell_therapy.jpg';
+
 export default function PopularTreatments() {
   const treatments = [
     {
-      img: "https://images.pexels.com/photos/4047000/pexels-photo-4047000.jpeg?auto=compress&cs=tinysrgb&w=500",
+      img: epiduralImg,
       title: "Epidural Steroid Injections",
-      desc: "Targeted relief for sciatica and nerve compression."
+      desc: "Targeted corticosteroid delivery to relieve sciatica, nerve compression and radicular pain."
     },
     {
-      img: "https://images.pexels.com/photos/3845126/pexels-photo-3845126.jpeg?auto=compress&cs=tinysrgb&w=500",
-      title: "Radiofrequency Ablation",
-      desc: "Long-lasting pain relief for facet joints and knees."
+      img: rfaImg,
+      title: "Radiofrequency Ablation (RFA)",
+      desc: "Precision RF energy to interrupt pain signals from facet joints for durable long-term relief."
     },
     {
-      img: "https://images.pexels.com/photos/5998492/pexels-photo-5998492.jpeg?auto=compress&cs=tinysrgb&w=500",
-      title: "COOLIEF RFA",
-      desc: "Advanced cooled RF for chronic knee osteoarthritis."
+      img: coolRfsImg,
+      title: "Cool RFS (Cooled RFA)",
+      desc: "Advanced cooled radiofrequency ablation for long-lasting chronic knee & joint pain relief."
     },
     {
-      img: "https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=500",
+      img: ozoneImg,
+      title: "Ozone Therapy",
+      desc: "Innovative ozone interventions to reduce inflammation and promote tissue healing."
+    },
+    {
+      img: diagnosticImg,
+      title: "Diagnostic Block",
+      desc: "Ultrasound-guided precision nerve blocks for accurate pain source identification."
+    },
+    {
+      img: prpImg,
       title: "Regenerative PRP Therapy",
-      desc: "Accelerate healing in joints, tendons, and ligaments."
+      desc: "Platelet-rich plasma therapy to accelerate healing in joints, tendons and ligaments."
     },
     {
-      img: "https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=500",
-      title: "Diagnostic Nerve Blocks",
-      desc: "Precision diagnosis and immediate pain relief."
-    },
-    {
-      img: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=500",
-      title: "Ozone Interventions",
-      desc: "Innovative ozone therapy for discogenic pain."
+      img: stemCellImg,
+      title: "Stem Cell Therapy",
+      desc: "Cutting-edge regenerative stem cell treatment for cartilage repair and tissue regeneration."
     }
   ];
 

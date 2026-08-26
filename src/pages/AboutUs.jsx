@@ -77,35 +77,134 @@ export default function AboutUs() {
               </div>
             </motion.div>
 
-            {/* Right Image (Doctor at Desk) */}
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} 
-              className="lg:w-[45%] w-full h-[500px] relative z-10"
+            {/* Right Image — Dr. Rajesh (actual photo) */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}
+              className="lg:w-[45%] w-full relative z-10 flex justify-center"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&auto=format&fit=crop&q=80" 
-                alt="Dr. Rajesh Kumar Vasam" 
-                className="w-full h-full object-cover object-top rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
-              />
+              {/* Decorative background blob */}
+              <div className="absolute -top-6 -right-6 w-72 h-72 rounded-full bg-[#9C4146]/10 blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-4 -left-4 w-48 h-48 rounded-full bg-[#C19A6B]/10 blur-2xl pointer-events-none" />
+
+              {/* Image wrapper */}
+              <div className="relative w-full max-w-[420px]">
+                {/* Offset decorative border */}
+                <div className="absolute inset-0 rounded-[28px] border-2 border-[#9C4146]/20 translate-x-3 translate-y-3" />
+
+                <img
+                  src="/dr_rajesh_professional.jpg"
+                  alt="Dr. Vasam Rajesh Kumar — Interventional Pain Physician"
+                  className="relative z-10 w-full object-cover object-top rounded-[28px] shadow-[0_24px_60px_rgba(17,42,70,0.18)] bg-[#1e375a]"
+                  style={{ minHeight: '460px', maxHeight: '520px' }}
+                />
+
+                {/* Credential badge — bottom left */}
+                <div className="absolute z-20 bottom-5 left-5 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-xl border border-gray-100 max-w-[200px]">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#9C4146] mb-0.5">Qualifications</p>
+                  <p className="text-[#1e375a] font-bold text-[13px] leading-snug">MBBS · MD · FIPM</p>
+                  <p className="text-gray-500 text-[11px] mt-0.5">Interventional Pain Physician</p>
+                </div>
+
+                {/* Experience badge — top right */}
+                <div className="absolute z-20 top-5 right-5 bg-[#9C4146] text-white rounded-2xl px-4 py-3 shadow-xl text-center">
+                  <p className="text-2xl font-black leading-none">10+</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Years Exp.</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* NEW: Mission Statement & Philosophy */}
-      <section className="py-20 bg-white relative">
-        <div className="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#9C4146]/10 text-[#9C4146] text-xs font-bold uppercase tracking-widest mb-6 border border-[#9C4146]/20">
-              Our Mission
-            </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-[#1e375a] leading-tight mb-8">
-              "To provide comprehensive pain relief and improve the quality of life of our patients through advanced interventional techniques, compassionate palliative care, and innovative regenerative medicine therapies."
-            </h2>
-            <p className="text-xl md:text-2xl font-serif italic text-[#C19A6B]">
-              Relieving Pain. Restoring Function. Renewing Hope.
-            </p>
-          </motion.div>
+      <section className="py-28 bg-[#fdfbfa] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#9C4146]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C19A6B]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            
+            {/* Left: Compassionate Photo Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="lg:w-[45%] w-full relative"
+            >
+              {/* Outer decorative offset border */}
+              <div className="absolute inset-0 rounded-[32px] border border-[#C19A6B]/30 translate-x-4 translate-y-4" />
+              
+              <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl bg-white p-3">
+                <img 
+                  src="/dr_patient_care.jpg" 
+                  alt="Compassionate patient care at Radiance Speciality Clinics" 
+                  className="w-full h-auto object-cover rounded-[24px]"
+                />
+              </div>
+
+              {/* Floating quote badge */}
+              <div className="absolute -bottom-8 -right-4 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-gray-100 max-w-[240px]">
+                <p className="text-2xl font-serif italic text-[#9C4146] font-semibold leading-tight">"A patient-first approach to healing."</p>
+                <div className="h-[2px] w-8 bg-[#C19A6B] mt-3" />
+              </div>
+            </motion.div>
+
+            {/* Right: Mission Content Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="lg:w-[55%] w-full text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4.5 py-1.5 rounded-full bg-[#9C4146]/5 text-[#9C4146] text-xs font-black uppercase tracking-widest mb-6 border border-[#9C4146]/10">
+                <span className="w-1.5 h-1.5 bg-[#9C4146] rounded-full animate-pulse" />
+                Our Mission
+              </div>
+
+              <h2 className="text-3xl md:text-[42px] font-serif font-bold text-[#1e375a] leading-[1.2] mb-6">
+                Redefining Pain Care, <span className="italic font-light text-[#9C4146]">Restoring Quality of Life.</span>
+              </h2>
+
+              <p className="text-lg md:text-[20px] font-serif text-gray-700 leading-relaxed italic mb-8 border-l-2 border-[#C19A6B]/50 pl-5">
+                "To provide comprehensive pain relief and improve the quality of life of our patients through advanced interventional techniques, compassionate palliative care, and innovative regenerative medicine therapies."
+              </p>
+
+              {/* Pillars of our Mission */}
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Advanced Interventional Precision",
+                    desc: "Using state-of-the-art C-Arm fluoroscopy and high-resolution ultrasound guidance to target pain at its exact source.",
+                    color: "#9C4146"
+                  },
+                  {
+                    title: "Compassionate Care Philosophy",
+                    desc: "Active listening, personalized treatment plans, and continuous rehabilitation support tailored to individual lifestyle goals.",
+                    color: "#1e375a"
+                  },
+                  {
+                    title: "Innovative Regenerative Therapies",
+                    desc: "Harnessing the healing power of PRP and stem cell science to actively repair joint cartilage and tendon damage.",
+                    color: "#C19A6B"
+                  }
+                ].map((pillar, i) => (
+                  <div key={i} className="flex gap-4 items-start">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-1" style={{ backgroundColor: `${pillar.color}15` }}>
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: pillar.color }} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#1e375a] text-[15px] mb-1">{pillar.title}</h4>
+                      <p className="text-[13px] text-gray-600 leading-relaxed">{pillar.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
@@ -129,12 +228,26 @@ export default function AboutUs() {
               { title: "Compassionate Care", desc: "Patient-centered approach focusing on your overall well-being.", icon: "ph:heart-light" },
               { title: "Long-Term Relief", desc: "Holistic integration of rehab and therapies for lasting comfort.", icon: "ph:infinity-light" }
             ].map((feature, idx) => (
-              <motion.div key={idx} variants={fadeUp} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-[#1e375a]/5 text-[#1e375a] flex items-center justify-center mb-4">
-                  <img src={`https://api.iconify.design/${feature.icon}.svg?color=%231e375a`} className="w-7 h-7" alt={feature.title} />
+              <motion.div 
+                key={idx} 
+                variants={fadeUp} 
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="relative overflow-hidden bg-white p-7 rounded-[24px] border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-all duration-500 group cursor-pointer"
+              >
+                {/* Gradient background overlay that reveals on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1e375a] via-[#2d4d75] to-[#9C4146] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+                
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded-xl bg-[#1e375a]/5 text-[#1e375a] flex items-center justify-center mb-5 group-hover:bg-white/10 group-hover:text-white transition-all duration-300">
+                    <img 
+                      src={`https://api.iconify.design/${feature.icon}.svg?color=%231e375a`} 
+                      className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300" 
+                      alt={feature.title} 
+                    />
+                  </div>
+                  <h4 className="font-bold text-[#1e375a] text-[16px] mb-2.5 group-hover:text-white transition-colors duration-300">{feature.title}</h4>
+                  <p className="text-[13px] text-gray-600 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{feature.desc}</p>
                 </div>
-                <h4 className="font-bold text-[#1e375a] text-[15px] mb-2">{feature.title}</h4>
-                <p className="text-[13px] text-gray-600 leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -269,67 +382,127 @@ export default function AboutUs() {
       </section>
 
       {/* 4. Leadership & Healthcare Organizations */}
-      <section className="py-24 bg-[#f8f9fa] border-y border-gray-200">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <section className="py-28 bg-[#faf9f8] border-y border-gray-100 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#9C4146]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C19A6B]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-2xl lg:text-[28px] font-serif text-[#1e375a] uppercase tracking-wide">LEADERSHIP & HEALTHCARE ORGANIZATIONS</h2>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-20">
+            <span className="text-[#9C4146] text-xs font-black uppercase tracking-widest block mb-3">Healthcare Management</span>
+            <h2 className="text-3xl lg:text-[40px] font-serif text-[#1e375a] font-bold">Leadership & Healthcare Organizations</h2>
             <DecorativeDivider />
+            <p className="text-gray-500 text-[15px] mt-4 max-w-2xl mx-auto leading-relaxed">Providing direction, anesthesia excellence, diagnostics, and wellness rehabilitation across Hyderabad.</p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             {/* Card 1 */}
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-white to-[#1e375a]/[0.03] rounded-[16px] border border-gray-200 p-8 shadow-sm flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-6 gap-2">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#1e375a] text-white flex items-center justify-center font-serif text-[18px] shrink-0">01</div>
-                  <div>
-                    <p className="text-[10px] font-bold text-gray-500 mb-1 uppercase tracking-wider">Founder & COO</p>
-                    <h3 className="text-[16px] font-serif font-bold text-[#1e375a] leading-snug">PrimeLite Health Care<br/>Private Limited</h3>
-                  </div>
+            <motion.div 
+              variants={fadeUp} 
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[32px] border border-gray-100 p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)] hover:shadow-[0_25px_60px_rgba(30,55,90,0.08)] transition-all duration-500 flex flex-col justify-between relative group overflow-hidden"
+            >
+              {/* Colored top-accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-[#1e375a]" />
+              
+              <div>
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-[#1e375a]/5 text-[#1e375a] flex items-center justify-center font-bold text-lg">01</div>
+                  <Building2 size={32} className="text-[#1e375a]/30 group-hover:text-[#1e375a] transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <Building2 size={36} className="text-[#1e375a] opacity-80 shrink-0" strokeWidth={1} />
+                
+                <p className="text-[10px] font-black text-[#9C4146] uppercase tracking-widest mb-1.5">Founder & COO</p>
+                <h3 className="text-[20px] font-serif font-bold text-[#1e375a] leading-tight mb-6">PrimeLite Health Care Pvt. Ltd.</h3>
+                
+                <p className="text-[13px] text-gray-600 leading-relaxed mb-6">
+                  Providing professional Anesthesia and Critical Care Medicine services to leading multi-speciality hospitals.
+                </p>
+
+                <ul className="space-y-3 text-[12.5px] text-gray-500 border-t border-gray-100 pt-6">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1e375a]" /> Professional Medical Staffing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1e375a]" /> Perioperative Anaesthesia
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1e375a]" /> Critical Care Setup & Support
+                  </li>
+                </ul>
               </div>
-              <p className="text-[12.5px] text-gray-600 leading-relaxed border-t border-gray-100 pt-5">
-                Providing Anesthesia and Critical Care Medicine services to hospitals, with a focus on professional staffing, perioperative care, and critical care support.
-              </p>
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-white to-[#4a728a]/[0.04] rounded-[16px] border border-gray-200 p-8 shadow-sm flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-6 gap-2">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#4a728a] text-white flex items-center justify-center font-serif text-[18px] shrink-0">02</div>
-                  <div>
-                    <p className="text-[10px] font-bold text-gray-500 mb-1 uppercase tracking-wider">Founder & Managing Director</p>
-                    <h3 className="text-[16px] font-serif font-bold text-[#4a728a] leading-snug mb-0.5">Radiance Speciality Clinics</h3>
-                    <p className="text-[10px] text-gray-400">Bachupally, Hyderabad</p>
-                  </div>
+            <motion.div 
+              variants={fadeUp} 
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[32px] border border-gray-100 p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)] hover:shadow-[0_25px_60px_rgba(30,55,90,0.08)] transition-all duration-500 flex flex-col justify-between relative group overflow-hidden"
+            >
+              {/* Colored top-accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-[#C19A6B]" />
+              
+              <div>
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-[#C19A6B]/10 text-[#C19A6B] flex items-center justify-center font-bold text-lg">02</div>
+                  <Building2 size={32} className="text-[#C19A6B]/50 group-hover:text-[#C19A6B] transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <Building2 size={36} className="text-[#4a728a] opacity-80 shrink-0" strokeWidth={1} />
+                
+                <p className="text-[10px] font-black text-[#9C4146] uppercase tracking-widest mb-1.5">Founder & Managing Director</p>
+                <h3 className="text-[20px] font-serif font-bold text-[#1e375a] leading-tight mb-6">Radiance Speciality Clinics</h3>
+                
+                <p className="text-[13px] text-gray-600 leading-relaxed mb-6">
+                  A high-end multi-speciality centre located in Bachupally, Hyderabad, focusing on evidence-based outpatient therapies.
+                </p>
+
+                <ul className="space-y-3 text-[12.5px] text-gray-500 border-t border-gray-100 pt-6">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C19A6B]" /> Interventional Pain Medicine
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C19A6B]" /> Comprehensive Women's Health
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C19A6B]" /> In-House Diagnostic Services
+                  </li>
+                </ul>
               </div>
-              <p className="text-[12.5px] text-gray-600 leading-relaxed border-t border-gray-100 pt-5">
-                A multispeciality healthcare centre with services including Interventional Pain Management, Women's Health & Fertility, Diagnostics and other specialty healthcare services.
-              </p>
             </motion.div>
 
             {/* Card 3 */}
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-white to-[#9C4146]/[0.03] rounded-[16px] border border-gray-200 p-8 shadow-sm flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-6 gap-2">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#9C4146] text-white flex items-center justify-center font-serif text-[18px] shrink-0">03</div>
-                  <div>
-                    <p className="text-[10px] font-bold text-gray-500 mb-1 uppercase tracking-wider">Managing Director & CEO</p>
-                    <h3 className="text-[16px] font-serif font-bold text-[#9C4146] leading-snug mb-0.5">Ramanuja Rehabilitation<br/>and Wellness Centre</h3>
-                    <p className="text-[10px] text-gray-400">RC Puram, Hyderabad</p>
-                  </div>
+            <motion.div 
+              variants={fadeUp} 
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[32px] border border-gray-100 p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)] hover:shadow-[0_25px_60px_rgba(30,55,90,0.08)] transition-all duration-500 flex flex-col justify-between relative group overflow-hidden"
+            >
+              {/* Colored top-accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-[#9C4146]" />
+              
+              <div>
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-[#9C4146]/10 text-[#9C4146] flex items-center justify-center font-bold text-lg">03</div>
+                  <Building2 size={32} className="text-[#9C4146]/50 group-hover:text-[#9C4146] transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <Building2 size={36} className="text-[#9C4146] opacity-80 shrink-0" strokeWidth={1} />
+                
+                <p className="text-[10px] font-black text-[#9C4146] uppercase tracking-widest mb-1.5">Managing Director & CEO</p>
+                <h3 className="text-[20px] font-serif font-bold text-[#1e375a] leading-tight mb-6">Ramanuja Rehab Centre</h3>
+                
+                <p className="text-[13px] text-gray-600 leading-relaxed mb-6">
+                  Comprehensive recovery and healthy ageing therapies located in RC Puram, Hyderabad.
+                </p>
+
+                <ul className="space-y-3 text-[12.5px] text-gray-500 border-t border-gray-100 pt-6">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9C4146]" /> Post-Surgical & Orthopedic Rehab
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9C4146]" /> Neurological Rehabilitation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9C4146]" /> Geriatric & Wellness Care
+                  </li>
+                </ul>
               </div>
-              <p className="text-[12.5px] text-gray-600 leading-relaxed border-t border-gray-100 pt-5">
-                A comprehensive rehabilitation and wellness facility focused on post-surgical rehabilitation, neurological rehabilitation, physiotherapy, critical care support, pulmonary rehabilitation, orthopedic rehabilitation, and healthy ageing.
-              </p>
             </motion.div>
 
           </motion.div>
@@ -337,38 +510,80 @@ export default function AboutUs() {
       </section>
 
       {/* 5. Professional Philosophy */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-[#fbf7f4] rounded-[40px] flex flex-col md:flex-row relative shadow-lg">
+      <section className="py-32 bg-[#FAF9F5] relative overflow-hidden">
+        {/* Subtle high-end luxury background accents */}
+        <div className="absolute top-0 right-10 w-96 h-96 bg-[#C19A6B]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-[#9C4146]/3 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             
-            {/* Left Doctor Portrait */}
-            <div className="md:w-[35%] relative flex items-end">
-               <img 
-                 src="https://images.unsplash.com/photo-1537368910025-702800faa86b?w=500&auto=format&fit=crop&q=80" 
-                 alt="Dr. Rajesh" 
-                 className="relative w-[90%] md:w-[120%] max-w-[400px] h-auto object-cover rounded-t-[32px] md:rounded-none z-10 bottom-0 md:-ml-8 -mt-16 md:-mt-24 drop-shadow-2xl" 
-               />
-            </div>
+            {/* Left: Beautiful Doctor Portrait with Luxury Arched Frame */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:w-[42%] w-full relative flex justify-center"
+            >
+              {/* Decorative offset frames */}
+              <div className="absolute inset-0 rounded-t-[180px] rounded-b-[40px] border border-[#C19A6B]/40 translate-x-4 translate-y-4" />
+              <div className="absolute inset-0 rounded-t-[180px] rounded-b-[40px] border border-[#1e375a]/10 -translate-x-2 -translate-y-2" />
+              
+              <div className="relative z-10 w-full max-w-[420px] rounded-t-[180px] rounded-b-[40px] overflow-hidden shadow-[0_30px_60px_rgba(30,55,90,0.12)] bg-white p-3 border border-gray-100">
+                <img 
+                  src="/dr_rajesh_professional.jpg" 
+                  alt="Dr. Vasam Rajesh Kumar" 
+                  className="w-full h-auto object-cover rounded-t-[170px] rounded-b-[32px] bg-[#FAF9F5]" 
+                />
+              </div>
 
-            {/* Middle Content */}
-            <div className="md:w-[40%] p-10 lg:p-16 relative z-10 flex flex-col justify-center">
-               <h3 className="font-serif text-[18px] font-bold text-[#1e375a] uppercase mb-1">PROFESSIONAL PHILOSOPHY</h3>
-               <div className="flex justify-start mb-6 -ml-12"><DecorativeDivider /></div>
-               <p className="text-[13px] text-gray-700 leading-relaxed font-medium">
-                 Dr. Rajesh Kumar Vasam believes in evidence-based, patient-centred and minimally invasive approaches wherever appropriate, combining accurate diagnosis, advanced interventional procedures, critical care expertise and rehabilitation to improve patients' pain, function and quality of life.
-               </p>
-            </div>
+              {/* Gold clinical core value badge */}
+              <div className="absolute bottom-6 -left-6 z-20 bg-[#1e375a] text-white rounded-2xl p-5 shadow-2xl border border-white/10 max-w-[200px]">
+                <p className="text-[10px] font-black uppercase tracking-widest text-[#C19A6B] mb-1">Core Focus</p>
+                <p className="text-white font-serif text-[15px] font-bold leading-snug">Patient-Centered Outcomes</p>
+              </div>
+            </motion.div>
 
-            {/* Right Quote */}
-            <div className="md:w-[25%] p-10 flex flex-col justify-center relative">
-               <div className="absolute top-4 left-4 text-[100px] text-[#9C4146] font-serif leading-none opacity-20 rotate-180">"</div>
-               <p className="font-serif text-[18px] lg:text-[22px] text-[#1e375a] font-bold leading-snug relative z-10 mt-8 text-center">
-                 The goal is not just to relieve pain — it is to help patients return to a better, more active life.
-               </p>
-               <div className="absolute bottom-[-20px] right-4 text-[100px] text-[#9C4146] font-serif leading-none opacity-20">"</div>
-            </div>
+            {/* Right: Premium Editorial Text Block */}
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="lg:w-[58%] w-full text-left"
+            >
+              <div className="inline-flex items-center gap-2 mb-6">
+                <div className="w-8 h-[1px] bg-[#9C4146]" />
+                <span className="text-[#9C4146] text-xs font-black uppercase tracking-widest">Philosophy</span>
+              </div>
+              
+              <h3 className="font-serif text-3xl md:text-[45px] font-bold text-[#1e375a] leading-[1.15] mb-8">
+                Our Compassionate <br />
+                <span className="italic font-light text-[#9C4146]">Healing Philosophy</span>
+              </h3>
+              
+              <p className="text-[15.5px] text-gray-600 leading-relaxed font-light mb-10 max-w-xl">
+                Dr. Vasam Rajesh Kumar believes in evidence-based, patient-centred and minimally invasive approaches wherever appropriate. By combining accurate diagnosis, advanced interventional procedures, critical care expertise, and customized rehabilitation plans, we don't just treat symptoms — we restore your lifestyle.
+              </p>
 
-          </motion.div>
+              {/* Styled quote frame */}
+              <div className="relative bg-[#1e375a] text-white rounded-3xl p-8 md:p-10 shadow-xl border-l-[6px] border-[#9C4146] overflow-hidden">
+                {/* Decorative quote icon */}
+                <div className="absolute right-6 bottom-4 text-[130px] text-white/5 font-serif leading-none select-none pointer-events-none">“</div>
+                
+                <p className="font-serif text-lg md:text-[21px] text-white/95 italic leading-relaxed relative z-10 font-light">
+                  "The goal is not just to temporarily relieve pain — it is to help patients safely return to a better, more active and functional life."
+                </p>
+                
+                <div className="flex items-center gap-3 mt-6 relative z-10">
+                  <div className="h-[1px] w-6 bg-[#C19A6B]" />
+                  <p className="text-xs uppercase tracking-widest font-black text-[#C19A6B]">Dr. Vasam Rajesh Kumar</p>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
