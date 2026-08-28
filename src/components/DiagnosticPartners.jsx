@@ -38,7 +38,15 @@ export default function DiagnosticPartners() {
       features: ["Pain Management", "Women's Health", "Home Care Services"]
     },
     {
-      name: "Ramanuja and Life Cell Diagnostics",
+      name: "Ramanuja Rehabilitation and Wellness Centre",
+      type: "Rehabilitation & Wellness",
+      role: "Managing Director Consultant and Critical Care and Pain Physician",
+      location: "Hyderabad",
+      icon: <Building2 size={24} strokeWidth={1.5} />,
+      features: ["Rehabilitation Services", "Physiotherapy", "Wellness Care"]
+    },
+    {
+      name: "Life Cell Diagnostics",
       type: "Diagnostics Partner",
       role: "Managing Director Consultant and Critical Care and Pain Physician",
       location: "Hyderabad",

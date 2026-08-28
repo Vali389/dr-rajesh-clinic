@@ -70,6 +70,7 @@ export default function Footer() {
                 { label: 'Home Page', path: '/' },
                 { label: 'About Dr. Rajesh', path: '/about' },
                 { label: 'Treatments & Services', path: '/services' },
+                { label: 'Media & Photo Gallery', path: '/gallery' },
                 { label: 'Medical Blog & Articles', path: '/blog' },
                 { label: 'Contact Clinic', path: '/contact' },
               ].map((item) => (
