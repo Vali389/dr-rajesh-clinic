@@ -1,10 +1,11 @@
-import { CalendarDays, CheckCircle2, ChevronRight, ChevronDown, ArrowRight } from 'lucide-react';
+import { CalendarDays, CheckCircle2, ChevronRight, ChevronDown, ArrowRight, Clock, ShieldCheck, HeartPulse, Target, FileText, UserCheck } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import StatsBar from '../components/StatsBar';
 import PopularTreatments from '../components/PopularTreatments';
 import { services } from '../data/services';
+import { LeafIcon } from '../components/CustomIcons';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('Spine & Back Pain');
@@ -109,13 +110,13 @@ export default function Services() {
 
         {/* Decorative leaf/floral elements */}
         <div className="absolute top-0 left-0 w-48 h-48 opacity-20 pointer-events-none -translate-x-8 -translate-y-4">
-          <img src="https://api.iconify.design/ph:leaf-thin.svg?color=%239C4146" className="w-full h-full" alt="" />
+          <LeafIcon className="w-full h-full" color="#9C4146" />
         </div>
         <div className="absolute top-10 left-32 w-32 h-32 opacity-10 pointer-events-none">
-          <img src="https://api.iconify.design/ph:leaf-thin.svg?color=%239C4146" className="w-full h-full rotate-45" alt="" />
+          <LeafIcon className="w-full h-full rotate-45" color="#9C4146" />
         </div>
         <div className="absolute bottom-0 right-0 w-40 h-40 opacity-10 pointer-events-none translate-x-4 translate-y-4">
-          <img src="https://api.iconify.design/ph:leaf-thin.svg?color=%239C4146" className="w-full h-full -rotate-45" alt="" />
+          <LeafIcon className="w-full h-full -rotate-45" color="#9C4146" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -190,7 +191,7 @@ export default function Services() {
                 className="absolute -bottom-6 -right-2 sm:right-4 bg-[#1e375a] text-white px-6 py-4 rounded-2xl shadow-2xl border-2 border-white flex items-center gap-4 z-20 max-w-[240px]"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#C19A6B]/20 flex items-center justify-center text-[#C19A6B] shrink-0">
-                  <img src="https://api.iconify.design/ph:heartbeat-fill.svg?color=%23C19A6B" className="w-6 h-6" alt="" />
+                  <HeartPulse className="w-6 h-6 text-[#C19A6B]" strokeWidth={1.75} />
                 </div>
                 <div>
                   <h4 className="font-serif font-bold text-sm text-white leading-tight">Advanced Pain Relief</h4>
@@ -218,22 +219,22 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: 'ph:clock-bold',
+                icon: Clock,
                 title: 'Outpatient Procedure',
                 desc: 'Most procedures take under 45 minutes with no hospital overnight stay needed.'
               },
               {
-                icon: 'ph:shield-check-bold',
+                icon: ShieldCheck,
                 title: 'Zero Open Surgery',
                 desc: 'Performed using micro-needles and catheters under image guidance without open cuts.'
               },
               {
-                icon: 'ph:first-aid-bold',
+                icon: HeartPulse,
                 title: 'Rapid Recovery',
                 desc: 'Patients return home the same day and resume daily active life within 24-48 hours.'
               },
               {
-                icon: 'ph:target-bold',
+                icon: Target,
                 title: 'Pinpoint Accuracy',
                 desc: 'US-FDA approved C-Arm Fluoroscopy and Ultrasound target the exact pain-transmitting nerves.'
               }
@@ -244,7 +245,7 @@ export default function Services() {
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/15 hover:bg-white/15 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#C19A6B]/20 text-[#C19A6B] flex items-center justify-center mb-6">
-                  <img src={`https://api.iconify.design/${item.icon}.svg?color=%23C19A6B`} className="w-6 h-6" alt={item.title} />
+                  <item.icon className="w-6 h-6 text-[#C19A6B]" strokeWidth={1.75} />
                 </div>
                 <h3 className="font-serif font-bold text-xl text-white mb-3">{item.title}</h3>
                 <p className="text-white/70 text-xs leading-relaxed">{item.desc}</p>
@@ -502,15 +503,15 @@ export default function Services() {
 
             <div className="lg:w-[45%] flex justify-center lg:justify-between gap-8 md:gap-12 relative z-10">
                <div className="flex flex-col items-center text-center">
-                 <img src="https://api.iconify.design/ph:file-text-light.svg?color=%231e375a" className="w-8 h-8 mb-2" alt="icon"/>
+                 <FileText className="w-8 h-8 mb-2 text-[#1e375a]" strokeWidth={1.5} />
                  <p className="text-[11px] font-bold text-[#1e375a]">Personalised<br/>Treatment Plans</p>
                </div>
                <div className="flex flex-col items-center text-center">
-                 <img src="https://api.iconify.design/ph:shield-plus-light.svg?color=%231e375a" className="w-8 h-8 mb-2" alt="icon"/>
+                 <ShieldCheck className="w-8 h-8 mb-2 text-[#1e375a]" strokeWidth={1.5} />
                  <p className="text-[11px] font-bold text-[#1e375a]">Safe & Advanced<br/>Technology</p>
                </div>
                <div className="flex flex-col items-center text-center">
-                 <img src="https://api.iconify.design/ph:user-focus-light.svg?color=%231e375a" className="w-8 h-8 mb-2" alt="icon"/>
+                 <UserCheck className="w-8 h-8 mb-2 text-[#1e375a]" strokeWidth={1.5} />
                  <p className="text-[11px] font-bold text-[#1e375a]">Expert Care<br/>You Can Trust</p>
                </div>
             </div>

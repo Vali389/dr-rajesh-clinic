@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Wind, Dna, Monitor, Scan } from 'lucide-react';
 
 export default function OurFacilities() {
   const fadeUp = {
@@ -9,29 +10,25 @@ export default function OurFacilities() {
   const facilities = [
     { 
       name: "Ozone Therapy", 
-      icon: "healthicons:oxygen-tank-outline", 
-      fallbackIcon: "ph:wind-light",
+      icon: Wind, 
       delay: 0.2, 
       pos: "top-[15%] left-[5%] lg:left-[10%]" 
     },
     { 
       name: "Regenerative Therapy", 
-      icon: "healthicons:biochemistry-laboratory-outline", 
-      fallbackIcon: "ph:dna-light",
+      icon: Dna, 
       delay: 0.4, 
       pos: "top-[15%] right-[5%] lg:right-[10%]" 
     },
     { 
       name: "C-Arm", 
-      icon: "healthicons:medical-equipment-outline", 
-      fallbackIcon: "ph:monitor-light",
+      icon: Monitor, 
       delay: 0.6, 
       pos: "bottom-[15%] left-[5%] lg:left-[10%]" 
     },
     { 
       name: "Ultra Sound", 
-      icon: "healthicons:ultrasound-outline", 
-      fallbackIcon: "ph:scan-light",
+      icon: Scan, 
       delay: 0.8, 
       pos: "bottom-[15%] right-[5%] lg:right-[10%]" 
     }
@@ -85,13 +82,8 @@ export default function OurFacilities() {
               className={`absolute flex flex-col items-center gap-2 z-20 ${fac.pos}`}
             >
               {/* Circular Icon Circle */}
-              <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-[#3b438b] border-[5px] border-white shadow-xl flex items-center justify-center relative hover:bg-[#008ba3] transition-colors duration-300 group cursor-pointer">
-                <img 
-                  src={`https://api.iconify.design/${fac.icon}.svg?color=white`} 
-                  onError={(e) => { e.target.src = `https://api.iconify.design/${fac.fallbackIcon}.svg?color=white`; }}
-                  className="w-9 h-9 lg:w-11 lg:h-11 group-hover:scale-110 transition-transform" 
-                  alt={fac.name} 
-                />
+              <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-[#3b438b] border-[5px] border-white shadow-xl flex items-center justify-center relative hover:bg-[#008ba3] transition-colors duration-300 group cursor-pointer text-white">
+                <fac.icon className="w-9 h-9 lg:w-11 lg:h-11 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
               </div>
 
               {/* Label Badge */}
@@ -107,4 +99,3 @@ export default function OurFacilities() {
     </section>
   );
 }
-

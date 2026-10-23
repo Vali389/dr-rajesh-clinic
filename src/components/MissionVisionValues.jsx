@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Target, Eye, HeartHandshake } from 'lucide-react';
 
 export default function MissionVisionValues() {
   const fadeUp = {
@@ -9,21 +10,21 @@ export default function MissionVisionValues() {
   const cards = [
     {
       title: "MISSION",
-      icon: "ph:target-light",
+      icon: Target,
       desc: "To provide exceptional, compassionate, and comprehensive services",
       color: "#9C4146",
       readMore: true
     },
     {
       title: "VISION",
-      icon: "ph:eye-light",
+      icon: Eye,
       desc: "Aspire to be a beacon of innovation, collaboration, and excellence in the",
       color: "#1e375a",
       readMore: true
     },
     {
       title: "VALUES",
-      icon: "ph:handshake-light",
+      icon: HeartHandshake,
       desc: "Best Hospital service rooted in integrity, compassion, trust.",
       color: "#C19A6B",
       readMore: true
@@ -32,7 +33,7 @@ export default function MissionVisionValues() {
 
   return (
     <section className="py-20 bg-[#fbfbfa] relative overflow-hidden">
-      {/* Subtle hexagonal background pattern (optional, mimicking the reference image) */}
+      {/* Subtle hexagonal background pattern */}
       <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e375a 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -57,7 +58,7 @@ export default function MissionVisionValues() {
                   className="w-[85%] h-[85%] rounded-full flex items-center justify-center text-white transition-colors duration-300"
                   style={{ backgroundColor: card.color }}
                 >
-                   <img src={`https://api.iconify.design/${card.icon}.svg?color=white`} className="w-8 h-8" alt={card.title} />
+                   <card.icon className="w-8 h-8 text-white" strokeWidth={1.75} />
                 </div>
                 {/* Half ring decoration based on reference image */}
                 <div 
@@ -69,7 +70,6 @@ export default function MissionVisionValues() {
               <h3 className="font-serif font-bold text-[#1e375a] text-[20px] mb-4 tracking-wide">{card.title}</h3>
               <p className="text-gray-500 text-[14px] leading-relaxed mb-4">
                 {card.desc}
-                {card.readMore && <span className="text-[#1e375a] font-semibold ml-1 cursor-pointer hover:underline">Read more...</span>}
               </p>
             </motion.div>
           ))}

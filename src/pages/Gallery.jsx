@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Image as ImageIcon, Video as VideoIcon, Sparkles, Filter, Maximize2, X, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 
-// Import all 17 gallery photos from assets
+// Import all 21 gallery photos from assets
 import ph1 from '../assets/ph-gallery-1.jpeg';
 import ph2 from '../assets/ph-gallery-2.jpeg';
 import ph3 from '../assets/ph-gallery-3.jpeg';
@@ -20,6 +20,10 @@ import ph14 from '../assets/ph-gallery-14.jpeg';
 import ph15 from '../assets/ph-gallery-15.jpeg';
 import ph16 from '../assets/ph-gallery-16.jpeg';
 import ph17 from '../assets/ph-gallery-17.jpeg';
+import ph18 from '../assets/ph-gallery-18.jpeg';
+import ph19 from '../assets/ph-gallery-19.jpeg';
+import ph20 from '../assets/ph-gallery-20.jpeg';
+import ph21 from '../assets/ph-gallery-21.jpeg';
 
 const videoItems = [
   {
@@ -69,7 +73,11 @@ const photoItems = [
   { img: ph14, title: 'Personalized Doctor Guidance', category: 'Patient Care', desc: 'Comprehensive patient assessment & care' },
   { img: ph15, title: 'Interventional Clinical Team', category: 'Facilities', desc: 'Expert medical & nursing support staff' },
   { img: ph16, title: 'Academic Medical Lecture', category: 'Events', desc: 'Training next generation pain specialists' },
-  { img: ph17, title: 'Restoring Quality of Life', category: 'Patient Care', desc: 'Patient relief and recovery milestone' }
+  { img: ph17, title: 'Restoring Quality of Life', category: 'Patient Care', desc: 'Patient relief and recovery milestone' },
+  { img: ph18, title: 'Ultrasound-Guided Procedure', category: 'Procedures', desc: 'High-resolution real-time musculoskeletal & nerve imaging' },
+  { img: ph19, title: 'C-Arm Spinal Intervention', category: 'Procedures', desc: 'Minimally invasive spinal injection under fluoroscopic guidance' },
+  { img: ph20, title: 'Precision Interventional Therapy', category: 'Procedures', desc: 'Targeted nerve localization and therapeutic procedure' },
+  { img: ph21, title: 'Advanced Fluoroscopy Surgical Suite', category: 'Procedures', desc: 'State-of-the-art C-Arm imaging & procedural care' }
 ];
 
 export default function Gallery() {

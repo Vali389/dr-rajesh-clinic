@@ -1,10 +1,12 @@
+import { Award, Users, Trophy, Star, CalendarCheck } from 'lucide-react';
+
 export default function StatsBar() {
   const stats = [
-    { num: '10+', text: 'Years of Experience', icon: 'medal', color: '#1e375a' },
-    { num: '25K+', text: 'Happy Patients', icon: 'users', color: '#4a728a' },
-    { num: '15+', text: 'Advanced Technologies', icon: 'trophy', color: '#9C4146' },
-    { num: '98%', text: 'Patient Satisfaction', icon: 'star', color: '#C19A6B' },
-    { num: '5K+', text: 'Successful Treatments', icon: 'calendar-check', color: '#889b73' }
+    { num: '10+', text: 'Years of Experience', icon: Award, color: '#1e375a' },
+    { num: '25K+', text: 'Happy Patients', icon: Users, color: '#4a728a' },
+    { num: '15+', text: 'Advanced Technologies', icon: Trophy, color: '#9C4146' },
+    { num: '98%', text: 'Patient Satisfaction', icon: Star, color: '#C19A6B' },
+    { num: '5K+', text: 'Successful Treatments', icon: CalendarCheck, color: '#889b73' }
   ];
 
   return (
@@ -13,7 +15,7 @@ export default function StatsBar() {
         {stats.map((stat, idx) => (
           <div key={idx} className="flex-1 flex flex-col sm:flex-row items-center justify-center gap-4 py-8 px-4" style={{ backgroundColor: stat.color }}>
             <div className="text-white hover:scale-110 transition-transform shrink-0">
-              <img src={`https://api.iconify.design/ph:${stat.icon}-thin.svg?color=white`} className="w-10 h-10" alt="icon"/>
+              <stat.icon className="w-9 h-9 text-white" strokeWidth={1.5} />
             </div>
             <div className="text-center sm:text-left">
               <div className="text-[24px] font-serif text-white font-bold leading-none mb-1">{stat.num}</div>

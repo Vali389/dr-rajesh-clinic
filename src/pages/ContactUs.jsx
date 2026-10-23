@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sparkles, AlertCircle, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { WhatsAppIcon } from '../components/CustomIcons';
 
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
@@ -152,7 +153,7 @@ export default function ContactUs() {
                         className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md shrink-0"
                         title="Chat on WhatsApp"
                       >
-                        <img src="https://api.iconify.design/logos:whatsapp-icon.svg" className="w-5 h-5" alt="WA" />
+                        <WhatsAppIcon className="w-5 h-5" fill="white" />
                       </a>
                     </div>
                     <div className="flex items-center gap-3 pl-16">
@@ -243,7 +244,7 @@ export default function ContactUs() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider shadow-md transition-all"
                     >
-                      <img src="https://api.iconify.design/logos:whatsapp-icon.svg" className="w-5 h-5" alt="WhatsApp" />
+                      <WhatsAppIcon className="w-5 h-5" fill="white" />
                       Chat on WhatsApp Now
                     </a>
                   </div>
@@ -320,7 +321,7 @@ export default function ContactUs() {
                           <option>Interventional Pain Medicine</option>
                           <option>Spine & Back Pain Care</option>
                           <option>Joint & Knee Pain Management</option>
-                          <option>Laser & Aesthetic Procedures</option>
+                          <option>Palliative Care & Wellness Therapy</option>
                         </select>
                       </div>
 

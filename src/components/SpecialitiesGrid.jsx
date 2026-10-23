@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Brain, Wind, Activity, HeartPulse, Stethoscope, Droplet, User, Ear, Smile } from 'lucide-react';
 
 export default function SpecialitiesGrid() {
   const fadeUp = {
@@ -7,15 +8,15 @@ export default function SpecialitiesGrid() {
   };
 
   const specialities = [
-    { name: "Neuro Surgery & Neurology", icon: "ph:brain-light" },
-    { name: "Pulmonology & Critical Care", icon: "ph:lungs-light" },
-    { name: "Orthopedics & Trauma", icon: "ph:bone-light" },
-    { name: "Cardiology & Cardiothoracic Surgery", icon: "ph:heartbeat-light" },
-    { name: "Surgical Gastro & Laparoscopic Surgery", icon: "ph:stomach-light" },
-    { name: "Urology & Nephrology", icon: "ph:drop-light" }, // kidneys representation
-    { name: "Gynecology", icon: "ph:gender-female-light" },
-    { name: "ENT", icon: "ph:ear-light" },
-    { name: "Oral & Maxillofacial", icon: "ph:tooth-light" }
+    { name: "Neuro Surgery & Neurology", icon: Brain },
+    { name: "Pulmonology & Critical Care", icon: Wind },
+    { name: "Orthopedics & Trauma", icon: Activity },
+    { name: "Cardiology & Cardiothoracic Surgery", icon: HeartPulse },
+    { name: "Surgical Gastro & Laparoscopic Surgery", icon: Stethoscope },
+    { name: "Urology & Nephrology", icon: Droplet },
+    { name: "Gynecology", icon: User },
+    { name: "ENT", icon: Ear },
+    { name: "Oral & Maxillofacial", icon: Smile }
   ];
 
   return (
@@ -39,7 +40,7 @@ export default function SpecialitiesGrid() {
               className="flex items-center gap-6 group hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
             >
               <div className="w-20 h-20 rounded-full bg-white shadow-[0_10px_20px_rgba(0,0,0,0.05)] border-[4px] border-[#f5efeb] flex items-center justify-center shrink-0 group-hover:border-[#9C4146] transition-colors duration-300">
-                <img src={`https://api.iconify.design/${spec.icon}.svg?color=%239C4146`} className="w-10 h-10 group-hover:scale-110 transition-transform duration-300" alt={spec.name} />
+                <spec.icon className="w-9 h-9 text-[#9C4146] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
               </div>
               <h3 className="text-[#1e375a] font-bold text-[16px] leading-tight group-hover:text-[#9C4146] transition-colors">
                 {spec.name}

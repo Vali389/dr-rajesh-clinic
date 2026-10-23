@@ -17,8 +17,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm py-4">
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Dr. Rajesh Clinic" className="h-12 object-contain" />
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src="/favicon.png" alt="Dr. Rajesh Clinic" className="w-12 h-12 rounded-xl object-contain shadow-sm group-hover:scale-105 transition-transform" />
           <div className="flex flex-col">
             <span className="font-serif font-semibold text-2xl text-brand-dark leading-none">Dr. Vasam Rajesh Kumar</span>
             <span className="text-[0.6rem] tracking-widest text-gray-500 mt-1 uppercase">Pain Management · Palliative Care · Wellness Therapy</span>

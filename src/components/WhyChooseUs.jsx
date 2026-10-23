@@ -1,4 +1,4 @@
-import { CheckCircle2, Award, Microscope, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Award, Microscope, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WhyChooseUs() {
@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
               transition={{ repeat: Infinity, duration: 3.8, ease: "easeInOut" }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C19A6B]/15 border border-[#C19A6B]/30 text-[#C19A6B] text-[12px] font-bold uppercase tracking-widest mb-4"
             >
-              <img src="https://api.iconify.design/ph:butterfly-fill.svg?color=%23C19A6B" className="w-5 h-5" alt="Flying Butterfly" />
+              <Sparkles className="w-4 h-4 text-[#C19A6B]" />
               <span>WHY CHOOSE DR. RAJESH</span>
             </motion.div>
             <h2 className="text-4xl lg:text-5xl font-serif text-white leading-[1.15] mb-6">

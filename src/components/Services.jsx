@@ -1,7 +1,18 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Activity, ShieldCheck, HeartPulse, Sparkles, UserCheck, Stethoscope } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
+
+const getServiceIcon = (id) => {
+  switch (id) {
+    case 'chronic-back-neck-pain': return Activity;
+    case 'knee-osteoarthritis': return ShieldCheck;
+    case 'cancer-pain-palliative-care': return HeartPulse;
+    case 'frozen-shoulder-joint-pain': return Sparkles;
+    case 'headache-neuralgias': return Stethoscope;
+    default: return UserCheck;
+  }
+};
 
 export default function Services() {
   const fadeUp = {
@@ -30,16 +41,18 @@ export default function Services() {
 
         {/* 3-Column Grid */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((srv) => (
-            <motion.div key={srv.id} variants={fadeUp} whileHover={{ y: -10 }} className="group bg-[#fcfaf9] rounded-[24px] overflow-hidden border border-[#f5efeb] shadow-sm hover:shadow-[0_20px_40px_rgba(17,42,70,0.08)] transition-all duration-300 flex flex-col">
-              <Link to={`/services/${srv.id}`} className="block">
-                <div className="h-56 overflow-hidden relative shrink-0">
-                  <img src={srv.img} alt={srv.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#112a46]/80 to-transparent opacity-60"></div>
-                  <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white">
-                    <img src={`https://api.iconify.design/ph:${srv.icon}-thin.svg?color=white`} className="w-7 h-7" alt="icon" />
+          {services.map((srv) => {
+            const SrvIcon = getServiceIcon(srv.id);
+            return (
+              <motion.div key={srv.id} variants={fadeUp} whileHover={{ y: -10 }} className="group bg-[#fcfaf9] rounded-[24px] overflow-hidden border border-[#f5efeb] shadow-sm hover:shadow-[0_20px_40px_rgba(17,42,70,0.08)] transition-all duration-300 flex flex-col">
+                <Link to={`/services/${srv.id}`} className="block">
+                  <div className="h-56 overflow-hidden relative shrink-0">
+                    <img src={srv.img} alt={srv.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#112a46]/80 to-transparent opacity-60"></div>
+                    <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white">
+                      <SrvIcon className="w-6 h-6 text-white" strokeWidth={1.75} />
+                    </div>
                   </div>
-                </div>
                 <div className="p-8">
                   <h3 className="font-serif font-bold text-[#1e375a] text-[20px] mb-3 leading-snug">{srv.title}</h3>
                   <p className="text-[14px] text-gray-500 leading-relaxed mb-6">{srv.tagline}</p>
@@ -49,7 +62,8 @@ export default function Services() {
                 </div>
               </Link>
             </motion.div>
-          ))}
+          );
+        })}
         </motion.div>
 
         {/* View All Button at the bottom center */}

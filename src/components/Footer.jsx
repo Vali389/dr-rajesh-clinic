@@ -45,9 +45,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="inline-block mb-6">
               <div className="flex items-center gap-3">
-                 <div className="w-10 h-10 rounded-xl bg-[#9C4146] flex items-center justify-center text-white font-serif font-bold text-2xl shadow-md">
-                   R
-                 </div>
+                 <img src="/favicon.png" alt="Dr. Rajesh Clinic" className="w-11 h-11 rounded-xl shadow-md object-contain border border-[#C19A6B]/30" />
                  <div>
                     <h2 className="font-serif text-2xl font-bold text-white tracking-wide">Dr. Vasam Rajesh Kumar</h2>
                     <p className="text-[9px] uppercase tracking-[0.2em] text-[#C19A6B] font-bold">Interventional Pain Physician</p>
@@ -93,7 +91,7 @@ export default function Footer() {
                 'Spine & Sciatica Management',
                 'Epidural Steroid Injections',
                 'Joint & Shoulder Pain Care',
-                'Non-Surgical Laser Procedures'
+                'Palliative Care & Wellness Therapy'
               ].map((service) => (
                 <li key={service}>
                   <Link to="/services" className="text-sm text-white/75 hover:text-white flex items-center gap-2 group transition-colors">

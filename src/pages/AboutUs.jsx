@@ -1,7 +1,8 @@
-import { CheckCircle2, ChevronRight, GraduationCap, Building2, Award } from 'lucide-react';
+import { CheckCircle2, ChevronRight, GraduationCap, Building2, Award, Target, HeartHandshake, ShieldCheck, Activity, Zap, Heart, Infinity, Stethoscope, Brain, UserCheck, FileText, Crosshair, Clock, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import StatsBar from '../components/StatsBar';
+import drRajeshImg from '../assets/dr-rajesh-img-2.jpeg';
 
 export default function AboutUs() {
   const fadeUp = {
@@ -62,14 +63,14 @@ export default function AboutUs() {
               {/* 4 Circular Icons */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-4">
                 {[
-                  { icon: 'ph:user-focus-light', title: 'Evidence-Based\nCare', color: '#1e375a' },
-                  { icon: 'ph:hand-heart-light', title: 'Patient-Centred\nApproach', color: '#9C4146' },
-                  { icon: 'ph:shield-check-light', title: 'Minimally Invasive\nSolutions', color: '#d4af37' },
-                  { icon: 'ph:person-arms-spread-light', title: 'Better Function &\nQuality of Life', color: '#688e73' }
+                  { icon: Target, title: 'Evidence-Based\nCare', color: '#1e375a' },
+                  { icon: HeartHandshake, title: 'Patient-Centred\nApproach', color: '#9C4146' },
+                  { icon: ShieldCheck, title: 'Minimally Invasive\nSolutions', color: '#d4af37' },
+                  { icon: Activity, title: 'Better Function &\nQuality of Life', color: '#688e73' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full shadow-md flex items-center justify-center mb-4 transition-transform hover:-translate-y-1" style={{ backgroundColor: item.color }}>
-                       <img src={`https://api.iconify.design/${item.icon}.svg?color=white`} className="w-8 h-8" alt="icon"/>
+                    <div className="w-16 h-16 rounded-full shadow-md flex items-center justify-center mb-4 transition-transform hover:-translate-y-1 text-white" style={{ backgroundColor: item.color }}>
+                       <item.icon className="w-8 h-8" strokeWidth={1.75} />
                     </div>
                     <p className="text-[11.5px] font-bold text-[#1e375a] leading-[1.3] px-1 whitespace-pre-line">{item.title}</p>
                   </div>
@@ -92,7 +93,7 @@ export default function AboutUs() {
                 <div className="absolute inset-0 rounded-[28px] border-2 border-[#9C4146]/20 translate-x-3 translate-y-3" />
 
                 <img
-                  src="/dr_rajesh_professional.jpg"
+                  src={drRajeshImg}
                   alt="Dr. Vasam Rajesh Kumar — Interventional Pain Physician"
                   className="relative z-10 w-full object-cover object-top rounded-[28px] shadow-[0_24px_60px_rgba(17,42,70,0.18)] bg-[#1e375a]"
                   style={{ minHeight: '460px', maxHeight: '520px' }}
@@ -219,14 +220,14 @@ export default function AboutUs() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Expert Care", desc: "Provided by a fellowship-trained Interventional Pain Specialist.", icon: "ph:user-focus-light" },
-              { title: "Personalized Plans", desc: "Treatment plans carefully tailored to each individual patient.", icon: "ph:clipboard-text-light" },
-              { title: "Advanced Procedures", desc: "Image-guided, minimally invasive procedures for precision.", icon: "ph:crosshair-light" },
-              { title: "Avoid Major Surgery", desc: "Reduced need for major surgery whenever possible.", icon: "ph:shield-check-light" },
-              { title: "Faster Recovery", desc: "Minimal hospital stay allowing you to get back to life quicker.", icon: "ph:clock-clockwise-light" },
-              { title: "Multidisciplinary", desc: "Combining pain medicine, palliative care, and regenerative therapies.", icon: "ph:users-three-light" },
-              { title: "Compassionate Care", desc: "Patient-centered approach focusing on your overall well-being.", icon: "ph:heart-light" },
-              { title: "Long-Term Relief", desc: "Holistic integration of rehab and therapies for lasting comfort.", icon: "ph:infinity-light" }
+              { title: "Expert Care", desc: "Provided by a fellowship-trained Interventional Pain Specialist.", icon: UserCheck },
+              { title: "Personalized Plans", desc: "Treatment plans carefully tailored to each individual patient.", icon: FileText },
+              { title: "Advanced Procedures", desc: "Image-guided, minimally invasive procedures for precision.", icon: Crosshair },
+              { title: "Avoid Major Surgery", desc: "Reduced need for major surgery whenever possible.", icon: ShieldCheck },
+              { title: "Faster Recovery", desc: "Minimal hospital stay allowing you to get back to life quicker.", icon: Clock },
+              { title: "Multidisciplinary", desc: "Combining pain medicine, palliative care, and regenerative therapies.", icon: Users },
+              { title: "Compassionate Care", desc: "Patient-centered approach focusing on your overall well-being.", icon: Heart },
+              { title: "Long-Term Relief", desc: "Holistic integration of rehab and therapies for lasting comfort.", icon: Infinity }
             ].map((feature, idx) => (
               <motion.div 
                 key={idx} 
@@ -239,11 +240,7 @@ export default function AboutUs() {
                 
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-12 h-12 rounded-xl bg-[#1e375a]/5 text-[#1e375a] flex items-center justify-center mb-5 group-hover:bg-white/10 group-hover:text-white transition-all duration-300">
-                    <img 
-                      src={`https://api.iconify.design/${feature.icon}.svg?color=%231e375a`} 
-                      className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300" 
-                      alt={feature.title} 
-                    />
+                    <feature.icon className="w-6 h-6 text-[#1e375a] group-hover:text-white transition-colors duration-300" strokeWidth={1.75} />
                   </div>
                   <h4 className="font-bold text-[#1e375a] text-[16px] mb-2.5 group-hover:text-white transition-colors duration-300">{feature.title}</h4>
                   <p className="text-[13px] text-gray-600 leading-relaxed group-hover:text-white/80 transition-colors duration-300">{feature.desc}</p>
@@ -280,7 +277,7 @@ export default function AboutUs() {
 
               <motion.div variants={fadeUp} className="bg-white border border-gray-100 rounded-[20px] p-6 flex gap-6 items-center shadow-sm">
                 <div className="w-16 h-16 rounded-2xl bg-[#4a728a] flex items-center justify-center shrink-0 shadow-md">
-                  <img src="https://api.iconify.design/ph:stethoscope-thin.svg?color=white" className="w-8 h-8" alt="icon"/>
+                  <Stethoscope className="w-8 h-8 text-white" strokeWidth={1.75} />
                 </div>
                 <div>
                   <h4 className="font-serif font-bold text-[#4a728a] text-[18px] leading-tight mb-2">MD – Anesthesiology &<br/>Critical Care Medicine</h4>
@@ -321,9 +318,9 @@ export default function AboutUs() {
                   ))}
                 </div>
               </div>
-              <div className="md:w-1/3 opacity-30 mix-blend-multiply">
-                 {/* Placeholder for Brain Illustration */}
-                 <img src="https://api.iconify.design/ph:brain-thin.svg?color=%239C4146" className="w-full h-auto" alt="Brain Illustration" />
+              <div className="md:w-1/3 opacity-30 mix-blend-multiply flex items-center justify-center">
+                 {/* Brain Illustration */}
+                 <Brain className="w-32 h-32 text-[#9C4146]" strokeWidth={1.2} />
               </div>
             </motion.div>
 
@@ -532,7 +529,7 @@ export default function AboutUs() {
               
               <div className="relative z-10 w-full max-w-[420px] rounded-t-[180px] rounded-b-[40px] overflow-hidden shadow-[0_30px_60px_rgba(30,55,90,0.12)] bg-white p-3 border border-gray-100">
                 <img 
-                  src="/dr_rajesh_professional.jpg" 
+                  src={drRajeshImg} 
                   alt="Dr. Vasam Rajesh Kumar" 
                   className="w-full h-auto object-cover rounded-t-[170px] rounded-b-[32px] bg-[#FAF9F5]" 
                 />

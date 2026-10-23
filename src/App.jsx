@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
+import PageTitleManager from './components/PageTitleManager';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
@@ -16,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="font-sans antialiased text-[#162736] selection:bg-[#cdae9f] selection:text-[#112a46]">
+        <PageTitleManager />
         <ScrollToTop />
         <WhatsAppButton />
         <Header />

@@ -1,6 +1,7 @@
-import { CalendarDays, Search, UserCheck, ShieldCheck, HeartPulse, Award } from 'lucide-react';
+import { CalendarDays, Search, UserCheck, ShieldCheck, HeartPulse, Award, Cpu, Sparkles, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { LotusIcon, LeafIcon } from './CustomIcons';
 
 export default function Hero() {
   const fadeUp = {
@@ -48,21 +49,21 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
         className="absolute top-6 right-10 opacity-20 z-0 pointer-events-none"
       >
-        <img src="https://api.iconify.design/ph:flower-lotus-thin.svg?color=%239C4146" className="w-40 h-40" alt="" />
+        <LotusIcon className="w-40 h-40" color="#9C4146" />
       </motion.div>
       <motion.div
         animate={{ y: [0, -18, 0], rotate: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
         className="absolute bottom-28 left-4 opacity-10 z-0 pointer-events-none"
       >
-        <img src="https://api.iconify.design/ph:leaf-thin.svg?color=%231e375a" className="w-24 h-24" alt="" />
+        <LeafIcon className="w-24 h-24" color="#1e375a" />
       </motion.div>
       <motion.div
         animate={{ y: [0, -12, 0], rotate: [0, -8, 0] }}
         transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
         className="absolute top-24 left-2 opacity-10 z-0 pointer-events-none"
       >
-        <img src="https://api.iconify.design/ph:heartbeat-thin.svg?color=%239C4146" className="w-20 h-20" alt="" />
+        <Activity className="w-20 h-20 text-[#9C4146]" strokeWidth={1.5} />
       </motion.div>
 
       {/* Floating particles */}
@@ -152,11 +153,7 @@ export default function Hero() {
               transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
               className="absolute left-0 -top-4 opacity-30 pointer-events-none z-0"
             >
-              <img 
-                src="https://api.iconify.design/ph:flower-lotus-thin.svg?color=%239C4146" 
-                className="w-80 h-80 lg:w-[380px] lg:h-[380px]" 
-                alt="Lotus Symbol" 
-              />
+              <LotusIcon className="w-80 h-80 lg:w-[380px] lg:h-[380px]" color="#9C4146" />
             </motion.div>
 
             {/* Main Doctor/Treatment Image Card (Fits Perfectly) */}
@@ -183,25 +180,25 @@ export default function Hero() {
             <div className="relative z-20 flex flex-col gap-4 w-[210px] sm:w-[240px] -ml-16 sm:-ml-20">
               {[
                 { 
-                  icon: 'ph:plant-light', 
+                  icon: Cpu, 
                   title: 'Advanced Tech', 
                   sub: 'US-FDA Approved',
                   delay: 0 
                 },
                 { 
-                  icon: 'ph:user-gear-light', 
+                  icon: UserCheck, 
                   title: 'Personalized Care', 
                   sub: 'Tailored Roadmaps',
                   delay: 0.1 
                 },
                 { 
-                  icon: 'ph:shield-check-light', 
+                  icon: ShieldCheck, 
                   title: 'Safe & Effective', 
                   sub: 'Minimally Invasive',
                   delay: 0.2 
                 },
                 { 
-                  icon: 'ph:sparkle-light', 
+                  icon: Sparkles, 
                   title: 'Visible Results', 
                   sub: 'Lasting Pain Relief',
                   delay: 0.3 
@@ -217,11 +214,7 @@ export default function Hero() {
                 >
                   {/* Icon Circle Box */}
                   <div className="w-9 h-9 rounded-xl bg-[#9C4146]/10 text-[#9C4146] flex items-center justify-center shrink-0 group-hover:bg-[#9C4146] group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <img 
-                      src={`https://api.iconify.design/${card.icon}.svg?color=%239C4146`} 
-                      className="w-4.5 h-4.5 group-hover:brightness-200 transition-all" 
-                      alt="" 
-                    />
+                    <card.icon size={18} strokeWidth={2} />
                   </div>
 
                   {/* Card Text */}
