@@ -14,7 +14,7 @@ export default function DiagnosticPartners() {
 
   const partners = [
     {
-      name: "Omega PRP Hospital",
+      name: "PRK Hospital",
       type: "Multi-Speciality Hospital",
       role: "HOD — Anesthesiology & Pain Medicine",
       location: "Chandanagar, Hyderabad",

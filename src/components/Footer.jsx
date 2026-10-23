@@ -109,7 +109,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-white/75">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#9C4146] shrink-0 mt-1" />
-                <span className="leading-relaxed">Omega PRP Hospital, Chandanagar<br/>Radiance Speciality Clinics, Bachupally<br/><span className="text-white/50 text-xs">Sri Hanuman's Pagadala Pride, Flat No. 201, above Dominos Pizza, B Block, Bachupally 500118</span></span>
+                <span className="leading-relaxed">PRK Hospital, Chandanagar<br/>Radiance Speciality Clinics, Bachupally<br/><span className="text-white/50 text-xs">Sri Hanuman's Pagadala Pride, Flat No. 201, above Dominos Pizza, B Block, Bachupally 500118</span></span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#9C4146] shrink-0 mt-1" />
@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-[#9C4146] shrink-0 mt-1" />
-                <span className="leading-relaxed">Omega PRP: 9am - 4pm<br/>Radiance: 6pm - 9pm</span>
+                <span className="leading-relaxed">PRK Hospital: 9am - 4pm<br/>Radiance: 6pm - 9pm</span>
               </li>
             </ul>
           </div>

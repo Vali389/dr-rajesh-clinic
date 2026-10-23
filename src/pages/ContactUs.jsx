@@ -171,7 +171,7 @@ export default function ContactUs() {
                     <div>
                       <p className="text-[11px] font-bold text-[#C19A6B] uppercase tracking-wider">Clinic Locations</p>
                       <p className="text-white font-medium text-sm mt-0.5 leading-snug">
-                        Omega PRP Hospital, Chandanagar<br/>
+                        PRK Hospital, Chandanagar<br/>
                         Radiance Speciality Clinics, Bachupally
                       </p>
                       <p className="text-white/50 text-[11px] mt-1 leading-snug">
@@ -197,7 +197,7 @@ export default function ContactUs() {
                     <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
                       <Clock size={18} className="text-[#C19A6B] mb-2" />
                       <p className="text-[10px] font-bold text-white/60 uppercase tracking-wider">Availability</p>
-                      <p className="text-white text-xs font-semibold mt-0.5">Omega PRP: 9am - 4pm<br/>Radiance: 6pm - 9pm</p>
+                      <p className="text-white text-xs font-semibold mt-0.5">PRK Hospital: 9am - 4pm<br/>Radiance: 6pm - 9pm</p>
                     </div>
                   </div>
                 </div>
@@ -365,9 +365,9 @@ export default function ContactUs() {
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200 h-[350px]">
-              <div className="bg-[#1e375a] text-white py-2 px-4 text-center font-semibold text-sm">Omega PRP Hospital, Chandanagar (9 AM - 4 PM)</div>
+              <div className="bg-[#1e375a] text-white py-2 px-4 text-center font-semibold text-sm">PRK Hospital, Chandanagar (9 AM - 4 PM)</div>
               <iframe 
-                title="Omega PRP Hospital Chandanagar"
+                title="PRK Hospital Chandanagar"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1583803875567!2d78.32488331527871!3d17.498453404179374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9232938096dd%3A0xe67bc7d206f2c38f!2sChandanagar%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
